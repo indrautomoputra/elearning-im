@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="auto">
+<defs>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; }
+  </style>
+  <linearGradient id="incomingGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1565C0"/>
+    <stop offset="100%" stop-color="#0D47A1"/>
+  </linearGradient>
+  <linearGradient id="cleanedGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#2E7D32"/>
+    <stop offset="100%" stop-color="#1B5E20"/>
+  </linearGradient>
+  <linearGradient id="archiveGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#E65100"/>
+    <stop offset="100%" stop-color="#BF360C"/>
+  </linearGradient>
+  <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+    <path d="M0,0 L10,5 L0,10 Z" fill="#D32F2F"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="800" height="500" fill="#FAFAFA" rx="8"/>
+<rect x="0" y="0" width="800" height="55" fill="#D32F2F" rx="8"/>
+<rect x="0" y="27" width="800" height="28" fill="#D32F2F"/>
+<text x="400" y="36" text-anchor="middle" fill="#FFF" font-size="18" font-weight="bold">Alur Upload: Incoming → Cleaned → Archive</text>
+
+<!-- Column 1: Incoming -->
+<g transform="translate(40, 80)">
+  <rect x="0" y="0" width="200" height="40" rx="6" fill="url(#incomingGrad)"/>
+  <text x="100" y="26" text-anchor="middle" fill="#FFF" font-size="16" font-weight="bold">Incoming</text>
+  <text x="100" y="56" text-anchor="middle" fill="#1565C0" font-size="12" font-style="italic">Data Mentah dari Lapangan</text>
+
+  <rect x="10" y="75" width="180" height="44" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
+  <circle cx="30" cy="97" r="10" fill="#1565C0" opacity="0.8"/>
+  <text x="30" y="101" text-anchor="middle" fill="#FFF" font-size="11" font-weight="bold">1</text>
+  <text x="50" y="93" fill="#333" font-size="13">Terima Data Mentah</text>
+  <text x="50" y="111" fill="#777" font-size="11">Dari sektor &amp; lapangan</text>
+
+  <rect x="10" y="130" width="180" height="44" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
+  <circle cx="30" cy="152" r="10" fill="#1565C0" opacity="0.8"/>
+  <text x="30" y="156" text-anchor="middle" fill="#FFF" font-size="11" font-weight="bold">2</text>
+  <text x="50" y="148" fill="#333" font-size="13">Sortir berdasarkan Sektor</text>
+  <text x="50" y="166" fill="#777" font-size="11">Kategori prioritas</text>
+
+  <rect x="10" y="185" width="180" height="44" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
+  <circle cx="30" cy="207" r="10" fill="#1565C0" opacity="0.8"/>
+  <text x="30" y="211" text-anchor="middle" fill="#FFF" font-size="11" font-weight="bold">3</text>
+  <text x="50" y="203" fill="#333" font-size="13">Label Sumber Data</text>
+  <text x="50" y="221" fill="#777" font-size="11">Asal &amp; tanggal terima</text>
+</g>
+
+<!-- Arrow 1 -->
+<line x1="260" y1="220" x2="300" y2="220" stroke="#D32F2F" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+<text x="280" y="212" text-anchor="middle" fill="#D32F2F" font-size="11" font-weight="bold">Proses</text>
+
+<!-- Column 2: Cleaned -->
+<g transform="translate(310, 80)">
+  <rect x="0" y="0" width="200" height="40" rx="6" fill="url(#cleanedGrad)"/>
+  <text x="100" y="26" text-anchor="middle" fill="#FFF" font-size="16" font-weight="bold">Cleaned</text>
+  <text x="100" y="56" text-anchor="middle" fill="#2E7D32" font-size="12" font-style="italic">Data Dibersihkan</text>
+
+  <rect x="10" y="75" width="180" height="44" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1"/>
+  <circle cx="30" cy="97" r="10" fill="#2E7D32" opacity="0.8"/>
+  <text x="30" y="101" text-anchor="middle" fill="#FFF" font-size="11" font-weight="bold">1</text>
+  <text x="50" y="93" fill="#333" font-size="13">Validasi Data</text>
+  <text x="50" y="111" fill="#777" font-size="11">Periksa konsistensi</text>
+
+  <rect x="10" y="130" width="180" height="44" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1"/>
+  <circle cx="30" cy="152" r="10" fill="#2E7D32" opacity="0.8"/>
+  <text x="30" y="156" text-anchor="middle" fill="#FFF" font-size="11" font-weight="bold">2</text>
+  <text x="50" y="148" fill="#333" font-size="13">Triangulasi</text>
+  <text x="50" y="166" fill="#777" font-size="11">Silang multi-sumber</text>
+
+  <rect x="10" y="185" width="180" height="44" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1"/>
+  <circle cx="30" cy="207" r="10" fill="#2E7D32" opacity="0.8"/>
+  <text x="30" y="211" text-anchor="middle" fill="#FFF" font-size="11" font-weight="bold">3</text>
+  <text x="50" y="203" fill="#333" font-size="13">Format Ulang</text>
+  <text x="50" y="221" fill="#777" font-size="11">Standarisasi template</text>
+</g>
+
+<!-- Arrow 2 -->
+<line x1="530" y1="220" x2="570" y2="220" stroke="#D32F2F" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+<text x="550" y="212" text-anchor="middle" fill="#D32F2F" font-size="11" font-weight="bold">Siap</text>
+
+<!-- Column 3: Archive -->
+<g transform="translate(580, 80)">
+  <rect x="0" y="0" width="180" height="40" rx="6" fill="url(#archiveGrad)"/>
+  <text x="90" y="26" text-anchor="middle" fill="#FFF" font-size="16" font-weight="bold">Archive</text>
+  <text x="90" y="56" text-anchor="middle" fill="#E65100" font-size="12" font-style="italic">Data Siap Pakai</text>
+
+  <rect x="10" y="75" width="160" height="44" rx="8" fill="#FFF3E0" stroke="#E65100" stroke-width="1"/>
+  <text x="30" y="93" fill="#D32F2F" font-size="13" font-weight="bold">▸</text>
+  <text x="50" y="93" fill="#333" font-size="13">SitRep</text>
+  <text x="50" y="111" fill="#777" font-size="11">Laporan situasi</text>
+
+  <rect x="10" y="130" width="160" height="44" rx="8" fill="#FFF3E0" stroke="#E65100" stroke-width="1"/>
+  <text x="30" y="148" fill="#D32F2F" font-size="13" font-weight="bold">▸</text>
+  <text x="50" y="148" fill="#333" font-size="13">Dashboard</text>
+  <text x="50" y="166" fill="#777" font-size="11">Visualisasi data</text>
+
+  <rect x="10" y="185" width="160" height="44" rx="8" fill="#FFF3E0" stroke="#E65100" stroke-width="1"/>
+  <text x="30" y="203" fill="#D32F2F" font-size="13" font-weight="bold">▸</text>
+  <text x="50" y="203" fill="#333" font-size="13">Produk IM</text>
+  <text x="50" y="221" fill="#777" font-size="11">Info grafis &amp; peta</text>
+</g>
+
+<text x="400" y="470" text-anchor="middle" fill="#9E9E9E" font-size="11">Siklus Pengelolaan Data — IM Cell</text>
+</svg>

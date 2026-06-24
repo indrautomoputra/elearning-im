@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="auto">
+  <defs>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#757575"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FAFAFA" rx="8"/>
+  <rect x="0" y="0" width="800" height="6" fill="#D32F2F" rx="3"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#212121">Matriks Prioritas</text>
+  <line x1="320" y1="47" x2="480" y2="47" stroke="#D32F2F" stroke-width="2" stroke-opacity="0.5"/>
+
+  <!-- Matrix area -->
+  <!-- Outer box -->
+  <rect x="100" y="65" width="600" height="380" rx="4" fill="none" stroke="#BDBDBD" stroke-width="1"/>
+
+  <!-- Y-axis label -->
+  <text x="18" y="260" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#616161" transform="rotate(-90, 18, 260)" font-weight="bold">URGENSI</text>
+
+  <!-- Y-axis arrow -->
+  <line x1="75" y1="420" x2="75" y2="80" stroke="#757575" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Y-axis text -->
+  <text x="70" y="420" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#616161">Rendah</text>
+  <text x="70" y="90" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#616161">Tinggi</text>
+
+  <!-- X-axis label -->
+  <text x="400" y="478" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#616161" font-weight="bold">DAMPAK</text>
+
+  <!-- X-axis arrow -->
+  <line x1="120" y1="455" x2="680" y2="455" stroke="#757575" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- X-axis text -->
+  <text x="130" y="450" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#616161">Rendah</text>
+  <text x="660" y="450" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#616161">Tinggi</text>
+
+  <!-- Divider lines -->
+  <line x1="100" y1="270" x2="700" y2="270" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="400" y1="65" x2="400" y2="445" stroke="#9E9E9E" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Quadrant 1: Priority 1 (Top-Right) - Tinggi/Tinggi -->
+  <rect x="400" y="65" width="300" height="205" fill="#FFEBEE" opacity="0.6"/>
+  <rect x="650" y="72" width="140" height="26" rx="4" fill="#D32F2F" filter="url(#shadow)"/>
+  <text x="720" y="89" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#FFF">Prioritas 1</text>
+  <text x="550" y="110" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#D32F2F" font-weight="bold">Dampak Tinggi · Urgensi Tinggi</text>
+  <!-- Example items -->
+  <circle cx="420" cy="135" r="4" fill="#D32F2F"/>
+  <text x="432" y="139" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#424242">Kesehatan (gawat darurat)</text>
+  <circle cx="420" cy="158" r="4" fill="#D32F2F"/>
+  <text x="432" y="162" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#424242">Air Bersih (krisis akut)</text>
+  <circle cx="420" cy="181" r="4" fill="#D32F2F"/>
+  <text x="432" y="185" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#424242">Logistik (rantai pasok)</text>
+  <circle cx="420" cy="204" r="4" fill="#D32F2F"/>
+  <text x="432" y="208" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#424242">Shelter darurat</text>
+
+  <!-- Quadrant 2: Priority 2 (Bottom-Right) - Rendah/Tinggi -->
+  <rect x="400" y="270" width="300" height="175" fill="#FFF3E0" opacity="0.6"/>
+  <rect x="650" y="277" width="140" height="26" rx="4" fill="#E65100" filter="url(#shadow)"/>
+  <text x="720" y="294" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#FFF">Prioritas 2</text>
+  <text x="550" y="315" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#E65100" font-weight="bold">Dampak Tinggi · Urgensi Rendah</text>
+  <circle cx="420" cy="340" r="4" fill="#E65100"/>
+  <text x="432" y="344" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#424242">Pendidikan (rekonstruksi)</text>
+  <circle cx="420" cy="363" r="4" fill="#E65100"/>
+  <text x="432" y="367" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#424242">Sanitasi jangka panjang</text>
+
+  <!-- Quadrant 3: Perlu Diperhatikan (Top-Left) - Tinggi/Rendah -->
+  <rect x="100" y="65" width="300" height="205" fill="#FFF8E1" opacity="0.6"/>
+  <rect x="108" y="72" width="140" height="26" rx="4" fill="#F9A825" filter="url(#shadow)"/>
+  <text x="178" y="89" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#FFF">Perlu Diperhatikan</text>
+  <text x="250" y="115" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#F57F17" font-weight="bold">Dampak Rendah · Urgensi Tinggi</text>
+  <circle cx="120" cy="140" r="4" fill="#F57F17"/>
+  <text x="132" y="144" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#424242">Pangan (distribusi lokal)</text>
+  <circle cx="120" cy="163" r="4" fill="#F57F17"/>
+  <text x="132" y="167" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#424242">Perlindungan anak</text>
+
+  <!-- Quadrant 4: Pantau (Bottom-Left) - Rendah/Rendah -->
+  <rect x="100" y="270" width="300" height="175" fill="#E8F5E9" opacity="0.6"/>
+  <rect x="108" y="277" width="140" height="26" rx="4" fill="#43A047" filter="url(#shadow)"/>
+  <text x="178" y="294" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#FFF">Pantau</text>
+  <text x="250" y="320" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#2E7D32" font-weight="bold">Dampak Rendah · Urgensi Rendah</text>
+  <circle cx="120" cy="345" r="4" fill="#2E7D32"/>
+  <text x="132" y="349" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#424242">Data pendukung rutin</text>
+  <circle cx="120" cy="368" r="4" fill="#2E7D32"/>
+  <text x="132" y="372" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#424242">Dokumentasi</text>
+
+  <!-- Footer -->
+  <text x="400" y="492" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#BDBDBD">Sumber: Matriks Prioritas PMI - Informasi Manajemen</text>
+</svg>

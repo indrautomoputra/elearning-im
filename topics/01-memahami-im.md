@@ -1,0 +1,146 @@
+# Memahami Information Management
+
+IM membantu kita mengubah laporan lapangan menjadi informasi yang bisa dipakai untuk keputusan operasi.
+
+---
+
+## Kapan Topik Ini Dipakai di Posko
+
+Topik ini penting di hari pertama kamu bergabung dengan IM Cell PMI. Sebelum kamu pegang tools apa pun, kamu perlu paham dulu peran IM Cell PMI, apa outputnya, dan bagaimana alur kerja hariannya.
+
+---
+
+## Yang Harus Kamu Bisa Lakukan
+
+- [ ] Jelaskan peran IM Cell PMI dalam struktur tanggap darurat PMI
+- [ ] Sebutkan minimal 3 output utama IM Cell PMI
+- [ ] Gambarkan siklus IM harian dari pagi sampai malam
+- [ ] Terapkan triangulasi untuk verifikasi data
+- [ ] Kenali red flags data yang mencurigakan
+
+---
+
+## Gambaran Singkat
+
+IM adalah proses mengumpulkan, mengolah, menyajikan, dan menyebarkan informasi yang akurat dan tepat waktu. Tujuannya: mendukung keputusan operasi.
+
+IM Cell PMI berada di bawah koordinasi Perencanaan dan Monitoring. Kita bukan pengganti sektor teknis - kita adalah pendukung data yang membantu sektor lain menyajikan data mereka secara konsisten.
+
+Tanpa IM, data tersebar dan keputusan berdasarkan asumsi. Dengan IM, data terpusat dan keputusan berdasarkan fakta.
+
+### Hubungan dengan Struktur Surge IFRC
+
+Di tingkat global, IFRC memiliki sistem Surge yang menempatkan 4 role Information Management saat terjadi bencana besar: **IM Coordinator**, **Humanitarian Information Analysis Officer**, **Primary Data Collection Officer**, dan **Mapping & Visualisation Officer**. Keempat role ini tergabung dalam jaringan **SIMS (Surge Information Management Support)** yang menyediakan dukungan IM jarak jauh maupun langsung.
+
+IM Cell PMI di posko adalah ujung tombak dari sistem ini. Di level operasi, tugas-tugas dari keempat role surge itu dijalankan oleh tim IM Cell. Semakin besar skalanya, semakin terlihat pembagian role-nya - di posko skala kecil, satu orang bisa merangkap beberapa peran sekaligus.
+
+### Pemetaan Topik dengan Role IFRC
+
+| Topik OJT | Terkait dengan Role IFRC |
+|-----------|--------------------------|
+| 1. Memahami IM | Fondasi dasar untuk semua role |
+| 2. Setup & Orientasi | IM Coordinator (system & workflow) |
+| 3. Tools Operasional | Primary Data Collection Officer, Mapping & Visualisation Officer |
+| 4. Analisis Kebutuhan | Humanitarian Information Analysis Officer |
+| 5. PIN & Prioritas | Humanitarian Information Analysis Officer, IM Coordinator |
+| 6. Produk IM | Mapping & Visualisation Officer, IM Coordinator |
+| 7. Paket Data & Renops | IM Coordinator |
+
+### Perlindungan Data
+
+Data operasi adalah aset sensitif. Beberapa prinsip dasar:
+
+- Jangan sebarkan data mentah yang berisi nama, nomor telepon, atau alamat pengungsi ke pihak luar IM Cell
+- Gunakan proteksi password untuk file yang berisi data sensitif
+- Bedakan informasi publik (bisa dibagikan ke media) dan informasi internal (hanya untuk kebutuhan operasi)
+- Jika ragu apakah suatu data boleh dibagikan, tanya ke pendamping atau IM Coordinator
+
+---
+
+## Langkah Kerja
+
+1. **Pahami struktur posko** - IM Cell PMI berada di bawah Perencanaan & Monitoring. Kenali siapa Manajer Operasi/Kepala Operasi dan sektor-sektor lain.
+2. **Kenali kebutuhan informasi** - tanya ke pengambil keputusan: "Data apa yang paling dibutuhkan hari ini?"
+3. **Kumpulkan data dari sektor** - hubungi kontak di kesehatan, shelter, WASH, logistik.
+4. **Verifikasi dan validasi** - gunakan triangulasi: bandingkan minimal 3 sumber.
+5. **Kelola dan simpan** - ikuti struktur folder, beri nama file konsisten.
+6. **Analisis dan sajikan** - olah data jadi SitRep, 4W, dashboard, peta.
+7. **Distribusikan** - pastikan laporan sampai ke Manajer Operasi/Kepala Operasi dan sektor terkait sebelum tenggat.
+
+---
+
+## Contoh Lapangan
+
+Kamu dapat data pengungsi dari BPBD: 1.500 jiwa. Dari posko: 1.450 jiwa. Dari kecamatan: 1.520 jiwa. Selisih < 5% - data bisa dipakai. Tapi jika satu sumber bilang 5.000 dan sumber lain 2.000, selisih > 20% - jangan pakai, investigasi dulu.
+
+---
+
+## Tugas Praktik OJT
+
+1. Baca struktur organisasi posko dan catat 5 sektor yang ada.
+2. Ambil satu data mentah (contoh dari pendamping), verifikasi pakai prinsip triangulasi - cek sumber, tanggal, konsistensi.
+3. Gambarkan siklus IM harian di posko kamu saat ini: jam berapa data masuk, kapan laporan dikumpulkan, kapan distribusi.
+4. Identifikasi 3 red flags dari data latihan yang diberikan pendamping.
+
+---
+
+## Output Minimum
+
+- Catatan struktur organisasi posko
+- 1 data yang sudah diverifikasi dengan metode triangulasi
+- Lembar kerja siklus IM harian
+
+---
+
+## Checklist Cepat
+
+- [ ] IM Cell PMI bukan sektor teknis - kita pendukung data
+- [ ] Triangulasi: minimal 3 sumber sebelum percaya satu angka
+- [ ] Siklus harian: pagi kumpulkan, siang olah, sore laporkan, malam backup
+- [ ] Red flags: angka bulat, data statis, sumber tunggal, laporan tanpa waktu
+- [ ] Backup data setiap akhir hari
+
+---
+
+## Kesalahan Umum
+
+| Kesalahan | Dampak | Pencegahan |
+|-----------|--------|------------|
+| Langsung percaya angka dari satu sumber | Laporan salah, keputusan keliru | Triangulasi sebelum pakai |
+| Menunggu data sempurna sebelum laporan | Laporan telat, keputusan tanpa data | Laporkan dengan catatan keterbatasan data |
+| Tidak backup data | Data hilang saat listrik mati/laptop rusak | Backup setiap sore |
+
+---
+
+## Kapan Harus Eskalasi
+
+Eskalasi ke pendamping atau IM senior jika:
+- Data dari sektor tidak kunjung masuk setelah diingatkan 2 kali
+- Ada indikasi data palsu atau manipulasi
+- Kamu diminta membuat keputusan tanpa data yang cukup
+- Terjadi selisih data besar antar sumber (>20%) dan tidak bisa diverifikasi
+
+---
+
+## Grafik atau Visual Terkait
+
+<div class="img-placeholder"><img src="../assets/img/grafik-01-siklus-im-harian.svg" alt="Siklus IM Harian" style="max-width:100%;height:auto;border-radius:4px"></div>
+<div class="img-placeholder"><img src="../assets/img/grafik-02-alur-data-keputusan.svg" alt="Alur Data ke Keputusan" style="max-width:100%;height:auto;border-radius:4px"></div>
+
+---
+
+## Catatan untuk Pendamping
+
+Pastikan relawan paham peran IM Cell PMI sebelum masuk ke teknis. Gunakan analogi sederhana: IM adalah "dapur data" - data masuk mentah, diproses, keluar jadi informasi siap pakai.
+
+Beri contoh nyata dari operasi yang sedang berjalan. Ajak relawan melihat langsung proses SitRep harian.
+
+---
+
+## Ringkasan Cepat
+
+- IM Cell PMI mengelola data untuk dukung keputusan operasi
+- Output utama: SitRep, 4W matrix, dashboard, peta
+- Triangulasi adalah kunci verifikasi - pakai minimal 3 sumber
+- Siklus harian: kumpulkan pagi, olah siang, laporkan sore, backup malam
+- Kalau ragu, tulis "belum terverifikasi" - jangan buat angka terlihat pasti

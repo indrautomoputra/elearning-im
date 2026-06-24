@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="auto">
+<defs>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; }
+  </style>
+  <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#D32F2F"/>
+    <stop offset="100%" stop-color="#B71C1C"/>
+  </linearGradient>
+  <linearGradient id="folderGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FFF9C4"/>
+    <stop offset="100%" stop-color="#FFF176"/>
+  </linearGradient>
+  <linearGradient id="folderOpen" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FFF9C4"/>
+    <stop offset="100%" stop-color="#FFEE58"/>
+  </linearGradient>
+</defs>
+<rect x="0" y="0" width="800" height="500" fill="#FAFAFA" rx="8"/>
+<rect x="0" y="0" width="800" height="60" fill="url(#headerGrad)" rx="8"/>
+<rect x="0" y="30" width="800" height="30" fill="url(#headerGrad)"/>
+<text x="400" y="28" text-anchor="middle" fill="#FFF" font-size="13">TIM INTI — UNIT IMO</text>
+<text x="400" y="48" text-anchor="middle" fill="#FFF" font-size="18" font-weight="bold">Struktur Folder — IM Cell SharePoint</text>
+
+<g transform="translate(60, 85)">
+  <rect x="0" y="0" width="24" height="18" fill="url(#folderGrad)" stroke="#F9A825" stroke-width="1" rx="2"/>
+  <polygon points="0,4 6,4 8,2 24,2 24,4 4,4" fill="#FFF9C4" stroke="#F9A825" stroke-width="0.5"/>
+  <text x="32" y="14" fill="#333" font-size="15" font-weight="bold">IM Cell /</text>
+</g>
+
+<g transform="translate(100, 120)">
+  <rect x="0" y="0" width="24" height="18" fill="url(#folderOpen)" stroke="#F9A825" stroke-width="1" rx="2"/>
+  <polygon points="0,4 6,4 8,2 24,2 24,4 4,4" fill="#FFF9C4" stroke="#F9A825" stroke-width="0.5"/>
+  <text x="32" y="14" fill="#D32F2F" font-size="14" font-weight="bold">01_Incoming /</text>
+</g>
+
+<g transform="translate(140, 152)">
+  <rect x="0" y="0" width="20" height="15" fill="url(#folderGrad)" stroke="#F9A825" stroke-width="1" rx="2"/>
+  <polygon points="0,3 5,3 7,1 20,1 20,3 3,3" fill="#FFF9C4" stroke="#F9A825" stroke-width="0.5"/>
+  <text x="28" y="12" fill="#555" font-size="13">Sektor_Kesehatan</text>
+</g>
+<g transform="translate(140, 178)">
+  <rect x="0" y="0" width="20" height="15" fill="url(#folderGrad)" stroke="#F9A825" stroke-width="1" rx="2"/>
+  <polygon points="0,3 5,3 7,1 20,1 20,3 3,3" fill="#FFF9C4" stroke="#F9A825" stroke-width="0.5"/>
+  <text x="28" y="12" fill="#555" font-size="13">Sektor_Air_Bersih</text>
+</g>
+<g transform="translate(140, 204)">
+  <rect x="0" y="0" width="20" height="15" fill="url(#folderGrad)" stroke="#F9A825" stroke-width="1" rx="2"/>
+  <polygon points="0,3 5,3 7,1 20,1 20,3 3,3" fill="#FFF9C4" stroke="#F9A825" stroke-width="0.5"/>
+  <text x="28" y="12" fill="#555" font-size="13">Laporan_Lapangan</text>
+</g>
+
+<g transform="translate(100, 240)">
+  <rect x="0" y="0" width="24" height="18" fill="url(#folderOpen)" stroke="#F9A825" stroke-width="1" rx="2"/>
+  <polygon points="0,4 6,4 8,2 24,2 24,4 4,4" fill="#FFF9C4" stroke="#F9A825" stroke-width="0.5"/>
+  <text x="32" y="14" fill="#D32F2F" font-size="14" font-weight="bold">02_Working /</text>
+</g>
+
+<g transform="translate(140, 272)">
+  <rect x="0" y="0" width="20" height="15" fill="url(#folderGrad)" stroke="#F9A825" stroke-width="1" rx="2"/>
+  <polygon points="0,3 5,3 7,1 20,1 20,3 3,3" fill="#FFF9C4" stroke="#F9A825" stroke-width="0.5"/>
+  <text x="28" y="12" fill="#555" font-size="13">Analisis</text>
+</g>
+<g transform="translate(140, 298)">
+  <rect x="0" y="0" width="20" height="15" fill="url(#folderGrad)" stroke="#F9A825" stroke-width="1" rx="2"/>
+  <polygon points="0,3 5,3 7,1 20,1 20,3 3,3" fill="#FFF9C4" stroke="#F9A825" stroke-width="0.5"/>
+  <text x="28" y="12" fill="#555" font-size="13">Produk_IM</text>
+</g>
+
+<g transform="translate(100, 334)">
+  <rect x="0" y="0" width="24" height="18" fill="url(#folderOpen)" stroke="#F9A825" stroke-width="1" rx="2"/>
+  <polygon points="0,4 6,4 8,2 24,2 24,4 4,4" fill="#FFF9C4" stroke="#F9A825" stroke-width="0.5"/>
+  <text x="32" y="14" fill="#D32F2F" font-size="14" font-weight="bold">03_Archive /</text>
+</g>
+
+<g transform="translate(140, 366)">
+  <rect x="0" y="0" width="20" height="15" fill="url(#folderGrad)" stroke="#F9A825" stroke-width="1" rx="2"/>
+  <polygon points="0,3 5,3 7,1 20,1 20,3 3,3" fill="#FFF9C4" stroke="#F9A825" stroke-width="0.5"/>
+  <text x="28" y="12" fill="#555" font-size="13">SitRep</text>
+</g>
+<g transform="translate(140, 392)">
+  <rect x="0" y="0" width="20" height="15" fill="url(#folderGrad)" stroke="#F9A825" stroke-width="1" rx="2"/>
+  <polygon points="0,3 5,3 7,1 20,1 20,3 3,3" fill="#FFF9C4" stroke="#F9A825" stroke-width="0.5"/>
+  <text x="28" y="12" fill="#555" font-size="13">Data_Referensi</text>
+</g>
+
+<g transform="translate(100, 428)">
+  <rect x="0" y="0" width="24" height="18" fill="url(#folderOpen)" stroke="#F9A825" stroke-width="1" rx="2"/>
+  <polygon points="0,4 6,4 8,2 24,2 24,4 4,4" fill="#FFF9C4" stroke="#F9A825" stroke-width="0.5"/>
+  <text x="32" y="14" fill="#D32F2F" font-size="14" font-weight="bold">04_Templates /</text>
+</g>
+
+<line x1="145" y1="85" x2="145" y2="120" stroke="#BDBDBD" stroke-width="1.5" stroke-dasharray="3,3"/>
+<line x1="185" y1="120" x2="185" y2="152" stroke="#BDBDBD" stroke-width="1" stroke-dasharray="2,2"/>
+<line x1="145" y1="240" x2="145" y2="120" stroke="#BDBDBD" stroke-width="1.5" stroke-dasharray="3,3"/>
+<line x1="145" y1="334" x2="145" y2="240" stroke="#BDBDBD" stroke-width="1.5" stroke-dasharray="3,3"/>
+<line x1="145" y1="428" x2="145" y2="334" stroke="#BDBDBD" stroke-width="1.5" stroke-dasharray="3,3"/>
+</svg>

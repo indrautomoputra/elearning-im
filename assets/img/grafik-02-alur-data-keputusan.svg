@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="auto">
+  <defs>
+    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D32F2F"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="header-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D32F2F"/>
+      <stop offset="100%" stop-color="#B71C1C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FAFAFA" rx="8"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#333">Alur Data Menuju Keputusan</text>
+  <line x1="200" y1="52" x2="600" y2="52" stroke="#D32F2F" stroke-width="2"/>
+
+  <!-- Box positions: 4 boxes spaced evenly, ~170px apart, starting at x=25 -->
+  <!-- Box widths: 155px each with 20px gap → 680px total used -->
+
+  <!-- Box 1: Lapangan -->
+  <rect x="25" y="160" width="160" height="180" rx="8" fill="#fff" stroke="#D32F2F" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="25" y="160" width="160" height="40" rx="8" fill="url(#header-grad)"/>
+  <rect x="25" y="192" width="160" height="8" fill="url(#header-grad)"/>
+  <text x="105" y="186" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#fff">LAPANGAN</text>
+  <text x="105" y="224" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#D32F2F">Data Mentah</text>
+  <text x="105" y="248" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Formulir</text>
+  <text x="105" y="266" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Wawancara</text>
+  <text x="105" y="284" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Observasi</text>
+  <text x="105" y="302" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Laporan</text>
+  <text x="105" y="326" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#999">Sumber: MIRS/AIM</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="185" y1="250" x2="210" y2="250" stroke="#D32F2F" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+
+  <!-- Box 2: IM Cell -->
+  <rect x="220" y="160" width="160" height="180" rx="8" fill="#fff" stroke="#D32F2F" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="220" y="160" width="160" height="40" rx="8" fill="url(#header-grad)"/>
+  <rect x="220" y="192" width="160" height="8" fill="url(#header-grad)"/>
+  <text x="300" y="186" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#fff">IM CELL</text>
+  <text x="300" y="224" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#D32F2F">Verifikasi &amp; Analisis</text>
+  <text x="300" y="248" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Validasi</text>
+  <text x="300" y="266" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Tabulasi</text>
+  <text x="300" y="284" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Analisis</text>
+  <text x="300" y="302" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Visualisasi</text>
+  <text x="300" y="326" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#999">Output: Info</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="380" y1="250" x2="405" y2="250" stroke="#D32F2F" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+
+  <!-- Box 3: Produk IM -->
+  <rect x="415" y="160" width="160" height="180" rx="8" fill="#fff" stroke="#D32F2F" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="415" y="160" width="160" height="40" rx="8" fill="url(#header-grad)"/>
+  <rect x="415" y="192" width="160" height="8" fill="url(#header-grad)"/>
+  <text x="495" y="186" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#fff">PRODUK IM</text>
+  <text x="495" y="224" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#D32F2F">SitRep, Dashboard, Peta</text>
+  <text x="495" y="248" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Situasi Report</text>
+  <text x="495" y="266" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Dashboard</text>
+  <text x="495" y="284" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Peta Bencana</text>
+  <text x="495" y="302" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Infografis</text>
+  <text x="495" y="326" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#999">Format: Digital/ Cetak</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="575" y1="250" x2="600" y2="250" stroke="#D32F2F" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+
+  <!-- Box 4: Manajer Operasi -->
+  <rect x="610" y="160" width="160" height="180" rx="8" fill="#fff" stroke="#D32F2F" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="610" y="160" width="160" height="40" rx="8" fill="url(#header-grad)"/>
+  <rect x="610" y="192" width="160" height="8" fill="url(#header-grad)"/>
+  <text x="690" y="186" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#fff">MANAJER OPERASI</text>
+  <text x="690" y="224" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#D32F2F">Keputusan</text>
+  <text x="690" y="248" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Alokasi SD</text>
+  <text x="690" y="266" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Prioritas</text>
+  <text x="690" y="284" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Skala Up</text>
+  <text x="690" y="302" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#555">• Evaluasi</text>
+  <text x="690" y="326" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#999">Aksi Tepat Waktu</text>
+
+  <!-- Pipeline bar below -->
+  <rect x="25" y="380" width="750" height="4" rx="2" fill="#D32F2F" opacity="0.3"/>
+
+  <!-- Pipeline labels -->
+  <text x="105" y="408" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#D32F2F">INPUT</text>
+  <text x="300" y="408" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#D32F2F">PROSES</text>
+  <text x="495" y="408" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#D32F2F">OUTPUT</text>
+  <text x="690" y="408" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#D32F2F">DAMPAK</text>
+
+  <!-- Footer -->
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#888">Alur Data ke Keputusan — Palang Merah Indonesia</text>
+</svg>

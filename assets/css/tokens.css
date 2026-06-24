@@ -1,0 +1,75 @@
+:root {
+  --color-red: #D52B1E;
+  --color-navy: #011E41;
+  --color-black: #1A1A1A;
+  --color-white: #FFFFFF;
+  --color-on-accent: #FFFFFF;
+  --color-gray-50: #F8F9FA;
+  --color-gray-100: #F0F2F5;
+  --color-gray-200: #E1E4E8;
+  --color-gray-300: #C8CCD2;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-green: #059669;
+  --color-orange: #D97706;
+  --color-blue: #2563EB;
+  --color-callout-tip-bg: #ECFDF5;
+  --color-callout-warning-bg: #FFFBEB;
+  --color-callout-critical-bg: #FEF2F2;
+  --font-heading: 'Montserrat', 'Arial Black', sans-serif;
+  --font-body: 'Open Sans', Arial, sans-serif;
+  --font-mono: 'SFMono-Regular', 'Consolas', 'Liberation Mono', Menlo, monospace;
+  --text-sm: 0.8rem;
+  --text-base: 0.85rem;
+  --text-md: 0.9rem;
+  --text-lg: 1rem;
+  --text-xl: 1.15rem;
+  --text-2xl: 1.35rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --sidebar-width: 280px;
+  --header-height: 76px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html { transition: background var(--transition-slow), color var(--transition-slow); }
+html *, html *::before, html *::after { transition: background-color var(--transition-slow), border-color var(--transition-slow), box-shadow var(--transition-slow); }
+@media (prefers-reduced-motion: reduce) {
+  html *, html *::before, html *::after { transition: none !important; }
+}
+
+[data-theme="dark"] {
+  --color-red: #EF4444;
+  --color-navy: #E2E8F0;
+  --color-black: #E5E7EB;
+  --color-white: #0F1117;
+  --color-gray-50: #161922;
+  --color-gray-100: #1A1D28;
+  --color-gray-200: #2A2D3A;
+  --color-gray-300: #3F4354;
+  --color-gray-400: #6B7085;
+  --color-gray-500: #9CA0B0;
+  --color-gray-600: #B0B4C4;
+  --color-gray-700: #C8CCD8;
+  --color-gray-800: #E2E6F0;
+  --color-green: #34D399;
+  --color-orange: #FBBF24;
+  --color-blue: #60A5FA;
+  --color-callout-tip-bg: #0D2818;
+  --color-callout-warning-bg: #2D200B;
+  --color-callout-critical-bg: #2D0F0F;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.4);
+}

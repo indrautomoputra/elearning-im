@@ -1,0 +1,189 @@
+﻿<!doctype html>
+<html lang="id">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>QGIS | IM Cell PMI</title>
+ <meta name="description" content="Panduan penggunaan QGIS untuk peta dan analisis spasial di IM Cell PMI." />
+ <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="../assets/css/main.css" />
+ <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+ <a href="#main" class="skip-link">Lompat ke konten utama</a>
+
+ <header class="site-header">
+ <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigasi"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+ <div class="logo">
+ <a href="../index.html">
+ <img class="logo-img logo-img-light" src="../assets/img/logo-header.svg" alt="IM Cell PMI" />
+ <img class="logo-img logo-img-dark" src="../assets/img/logo-header-white.svg" alt="IM Cell PMI" />
+ </a>
+ </div>
+ <div class="header-nav">
+ <div class="header-search">
+ <input id="global-search" type="search" placeholder="Cari..." />
+ <div id="search-results" class="search-results"></div>
+ </div>
+ <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"><svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+ </div>
+ </header>
+
+ <aside id="sidebar" class="sidebar">
+ <nav aria-label="Navigasi materi">
+ <ul id="sidebar-nav" class="sidebar-nav"></ul>
+ </nav>
+ </aside>
+
+ <main id="main" class="main-content">
+ <div id="breadcrumb" class="breadcrumb"></div>
+ <div id="content-body" class="content-body">
+ <p>Konten sedang dimuat... Jika tidak muncul dalam beberapa detik, <a href="../index.html">kembali ke Beranda</a>.</p>
+ </div>
+ </main>
+
+ <footer class="site-footer">
+ IM Cell PMI
+ <div class="footer-attr">Dibangun oleh <strong>@indrautomoputra</strong> - bukan dokumen resmi PMI/IFRC, untuk tujuan pembelajaran.</div>
+ </footer>
+
+ <script src="https://cdn.jsdelivr.net/npm/marked@15/marked.min.js"></script>
+ <script src="../assets/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/markdown" data-slug="tools-qgis">
+# QGIS Peta & Analisis Spasial
+
+Alat untuk membuat peta situasi, sebaran posko dan pengungsi, serta analisis spasial dasar.
+
+---
+
+## Kapan Dipakai
+
+Saat operasi butuh visualisasi lokasi sebaran pengungsi, titik banjir, lokasi posko, jangkauan layanan.
+
+---
+
+## Yang Harus Kamu Bisa
+
+- [ ] Tambah layer (SHP, GeoJSON, CSV dengan koordinat)
+- [ ] Atur styling layer (warna, ukuran, simbol)
+- [ ] Tambah label pada peta
+- [ ] Buat layout peta dengan judul, legenda, skala, north arrow
+- [ ] Ekspor peta ke PNG/PDF
+
+---
+
+## Langkah Kerja
+
+1. **Install** download Long Term Release dari `qgis.org`
+2. **Tambah basemap** Plugin - QuickMapServices - OpenStreetMap
+3. **Tambah data** `Ctrl + Shift + L` - pilih file SHP/GeoJSON atau CSV (pastikan ada kolom latitude/longitude)
+4. **Styling** klik kanan layer - **Properties** - **Symbology** - atur warna, ukuran, klasifikasi
+5. **Label** Properties - **Labels** - pilih kolom untuk label
+6. **Layout** **Project** - **Layout Manager** - **Add Map** - atur extent
+8. **Ekspor** Layout - Export as Image/PDF
+
+---
+
+## Elemen Wajib Peta
+
+Setiap peta yang kamu buat harus punya:
+
+- Judul lokasi dan tema
+- Legenda arti setiap simbol dan warna
+- Skala batang skala
+- North arrow arah utara
+- Tanggal pembuatan
+- Sumber data "Sumber: BPBD, PMI, 2025"
+
+---
+
+## Tips
+
+- Siapkan basemap OpenStreetMap via plugin **QuickMapServices**
+- Simpan project (.qgz) secara rutin QGIS bisa crash
+- Gunakan **graduated** symbology untuk data numerik (jumlah pengungsi)
+- Untuk pemula: cukup kuasai **point map** dulu (sebaran lokasi) polygon dan line nanti
+- Koordinat dari GPS Kobo: pastikan format desimal (bukan derajat-menit-detik)
+
+---
+
+## Contoh Lapangan
+
+Kamu dapat data 50 titik posko dari Excel (latitude + longitude). Import ke QGIS sebagai layer CSV. Styling: posko PMI merah, posko BPBD biru. Tambah basemap OSM. Buat layout, tambah legenda dan skala. Ekspor PNG untuk di-embed ke SitRep.
+
+---
+
+## Tugas Praktik OJT
+
+1. Install QGIS (Long Term Release)
+2. Tambah QuickMapServices plugin
+3. Import data CSV dengan koordinat
+4. Buat layout peta sederhana
+5. Ekspor ke PNG
+
+---
+
+## Checklist Cepat
+
+- [ ] QGIS terinstall (LTS)
+- [ ] Bisa tambah layer dan atur styling
+- [ ] Bisa buat layout peta
+- [ ] Peta punya legenda, skala, north arrow
+
+---
+
+## Kesalahan Umum
+
+| Kesalahan | Dampak | Pencegahan |
+|-----------|--------|------------|
+| Peta tanpa legenda | Pembaca tidak paham simbol | Selalu tambah legenda |
+| Tidak ada north arrow | Orientasi tidak jelas | Selalu tambah north arrow |
+| Lupa simpan project | Ulang dari awal | Ctrl+S setiap selesai step |
+| Koordinat salah format | Titik tidak muncul di peta | Pastikan desimal, bukan DMS |
+
+---
+
+## Eskalasi
+
+Hubungi pendamping jika:
+- Peta butuh data spasial yang tidak dimiliki tim (batas administratif, sungai, jalan)
+- Butuh analisis spasial lanjutan (buffer, intersect)
+
+---
+
+## Ringkasan Cepat
+
+- Peta wajib punya: judul, legenda, skala, north arrow, tanggal, sumber
+- Gunakan QuickMapServices untuk basemap
+- Simpan project rutin
+- Untuk pemula: kuasai point map dulu
+</script>
+</body>
+</html>
+

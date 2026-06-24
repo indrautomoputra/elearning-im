@@ -1,0 +1,19 @@
+title: OJT IM Cell PMI
+description: Panduan belajar sambil bertugas untuk relawan lokal PMI di lokasi bencana.
+url: ""
+baseurl: ""
+
+# Static HTML/CSS/JS site — not using Jekyll/minima
+# GitHub Pages will serve files as-is via .nojekyll
+markdown: GFM
+
+exclude:
+  - README.md
+  - node_modules
+  - vendor
+  - .opencode
+
+include:
+  - assets/css/style.css
+  - assets/css/main.css
+  - assets/js/main.js

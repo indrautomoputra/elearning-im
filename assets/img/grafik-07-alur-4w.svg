@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="auto">
+  <defs>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="112%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+    <filter id="shadowDeep" x="-3%" y="-3%" width="106%" height="112%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1565C0"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D32F2F"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#78909C"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FAFAFA" rx="8"/>
+  <rect x="0" y="0" width="800" height="6" fill="#D32F2F" rx="3"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#212121">Alur 4W</text>
+  <text x="400" y="55" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#757575">(Who, What, Where, When)</text>
+  <line x1="340" y1="62" x2="460" y2="62" stroke="#D32F2F" stroke-width="2" stroke-opacity="0.5"/>
+
+  <!-- Level 1: 4W Boxes -->
+  <!-- Box 1: Who -->
+  <rect x="60" y="90" width="140" height="70" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="120" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#1565C0">WHO</text>
+  <text x="130" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#424242">Siapa</text>
+  <circle cx="70" cy="98" r="10" fill="#1565C0"/>
+  <text x="70" y="102" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#FFF" font-weight="bold">1</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="200" y1="125" x2="240" y2="125" stroke="#1565C0" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+
+  <!-- Box 2: What -->
+  <rect x="250" y="90" width="140" height="70" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="120" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#1565C0">WHAT</text>
+  <text x="320" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#424242">Apa</text>
+  <circle cx="260" cy="98" r="10" fill="#1565C0"/>
+  <text x="260" y="102" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#FFF" font-weight="bold">2</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="390" y1="125" x2="430" y2="125" stroke="#1565C0" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+
+  <!-- Box 3: Where -->
+  <rect x="440" y="90" width="140" height="70" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="510" y="120" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#1565C0">WHERE</text>
+  <text x="510" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#424242">Dimana</text>
+  <circle cx="450" cy="98" r="10" fill="#1565C0"/>
+  <text x="450" y="102" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#FFF" font-weight="bold">3</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="580" y1="125" x2="620" y2="125" stroke="#1565C0" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+
+  <!-- Box 4: When -->
+  <rect x="630" y="90" width="140" height="70" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="700" y="120" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#1565C0">WHEN</text>
+  <text x="700" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#424242">Kapan</text>
+  <circle cx="640" cy="98" r="10" fill="#1565C0"/>
+  <text x="640" y="102" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#FFF" font-weight="bold">4</text>
+
+  <!-- Vertical connecting lines from each 4W box down -->
+  <line x1="130" y1="160" x2="130" y2="260" stroke="#1565C0" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="320" y1="160" x2="320" y2="260" stroke="#1565C0" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="510" y1="160" x2="510" y2="260" stroke="#1565C0" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="700" y1="160" x2="700" y2="260" stroke="#1565C0" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Horizontal collector line -->
+  <line x1="130" y1="260" x2="700" y2="260" stroke="#1565C0" stroke-width="2"/>
+
+  <!-- Down arrow to Analysis box -->
+  <line x1="400" y1="260" x2="400" y2="295" stroke="#D32F2F" stroke-width="3" marker-end="url(#arrowRed)"/>
+
+  <!-- Level 2: Analysis Box -->
+  <rect x="150" y="305" width="500" height="65" rx="10" fill="#FFEBEE" stroke="#D32F2F" stroke-width="2.5" filter="url(#shadowDeep)"/>
+  <text x="400" y="335" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#C62828">Analisis Gap &amp; Redundansi</text>
+  <text x="400" y="355" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#757575">Identifikasi kekurangan (gap) dan tumpang tindih (redundansi) dari data 4W</text>
+
+  <!-- Down arrow to Product box -->
+  <line x1="400" y1="370" x2="400" y2="405" stroke="#78909C" stroke-width="2.5" marker-end="url(#arrowGray)"/>
+
+  <!-- Level 3: Final Output -->
+  <rect x="230" y="415" width="340" height="55" rx="25" fill="#D32F2F" filter="url(#shadowDeep)"/>
+  <text x="400" y="445" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#FFF">Produk Informasi Manajemen</text>
+  <text x="400" y="460" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#FFCDD2">Laporan siap digunakan untuk pengambilan keputusan</text>
+
+  <!-- Side info boxes -->
+  <rect x="25" y="210" width="55" height="22" rx="4" fill="#E8EAF6" stroke="#5C6BC0" stroke-width="1"/>
+  <text x="52" y="225" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#283593">Input</text>
+
+  <rect x="720" y="210" width="55" height="22" rx="4" fill="#E8EAF6" stroke="#5C6BC0" stroke-width="1"/>
+  <text x="747" y="225" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#283593">Input</text>
+
+  <!-- Footer -->
+  <text x="400" y="492" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#BDBDBD">Sumber: Kerangka 4W - Informasi Manajemen PMI</text>
+</svg>

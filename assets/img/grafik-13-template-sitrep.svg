@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="auto">
+<defs>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; }
+  </style>
+  <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#D32F2F"/>
+    <stop offset="100%" stop-color="#B71C1C"/>
+  </linearGradient>
+</defs>
+<rect x="0" y="0" width="800" height="500" fill="#FFF" rx="4"/>
+<rect x="0" y="0" width="800" height="500" fill="none" stroke="#D32F2F" stroke-width="2" rx="4"/>
+
+<!-- Top red bar -->
+<rect x="2" y="2" width="796" height="6" fill="#D32F2F" rx="3"/>
+
+<!-- Header -->
+<g transform="translate(20, 20)">
+  <rect x="0" y="0" width="60" height="40" fill="#D32F2F" rx="4"/>
+  <text x="30" y="16" text-anchor="middle" fill="#FFF" font-size="10" font-weight="bold">PMI</text>
+  <text x="30" y="28" text-anchor="middle" fill="#FFF" font-size="7">Logo</text>
+
+  <text x="75" y="22" fill="#333" font-size="16" font-weight="bold">SITUATION REPORT</text>
+  <text x="75" y="36" fill="#777" font-size="10">Tanggal: 24 Juni 2026 | Lokasi: Kab. XYZ</text>
+
+  <text x="620" y="20" fill="#D32F2F" font-size="10" font-weight="bold">SitRep #01</text>
+  <text x="620" y="35" fill="#999" font-size="9">Periode: 24-30 Jun 2026</text>
+</g>
+
+<line x1="20" y1="68" x2="780" y2="68" stroke="#E0E0E0" stroke-width="1"/>
+
+<!-- Key Figures -->
+<g transform="translate(20, 80)">
+  <text x="0" y="14" fill="#333" font-size="11" font-weight="bold">▸ Key Figures</text>
+  <rect x="0" y="22" width="180" height="44" rx="6" fill="#FFEBEE" stroke="#EF9A9A" stroke-width="1"/>
+  <text x="90" y="40" text-anchor="middle" fill="#D32F2F" font-size="16" font-weight="bold">12.500</text>
+  <text x="90" y="56" text-anchor="middle" fill="#666" font-size="10">Penduduk Terdampak</text>
+
+  <rect x="188" y="22" width="180" height="44" rx="6" fill="#FFF3E0" stroke="#FFCC80" stroke-width="1"/>
+  <text x="278" y="40" text-anchor="middle" fill="#E65100" font-size="16" font-weight="bold">3.200</text>
+  <text x="278" y="56" text-anchor="middle" fill="#666" font-size="10">KK Mengungsi</text>
+
+  <rect x="376" y="22" width="180" height="44" rx="6" fill="#E8F5E9" stroke="#A5D6A7" stroke-width="1"/>
+  <text x="466" y="40" text-anchor="middle" fill="#2E7D32" font-size="16" font-weight="bold">8</text>
+  <text x="466" y="56" text-anchor="middle" fill="#666" font-size="10">Posko Aktif</text>
+
+  <rect x="564" y="22" width="196" height="44" rx="6" fill="#E3F2FD" stroke="#90CAF9" stroke-width="1"/>
+  <text x="662" y="40" text-anchor="middle" fill="#1565C0" font-size="16" font-weight="bold">4</text>
+  <text x="662" y="56" text-anchor="middle" fill="#666" font-size="10">Sektor Terdampak</text>
+</g>
+
+<line x1="20" y1="155" x2="780" y2="155" stroke="#E0E0E0" stroke-width="1"/>
+
+<!-- Situation Overview -->
+<g transform="translate(20, 165)">
+  <text x="0" y="14" fill="#333" font-size="11" font-weight="bold">▸ Situation Overview</text>
+  <rect x="0" y="22" width="500" height="105" rx="6" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="15" y="42" fill="#333" font-size="10" font-weight="bold">Gambaran Umum:</text>
+  <text x="15" y="60" fill="#666" font-size="10">Banjir melanda 4 kecamatan di Kab. XYZ akibat curah hujan tinggi</text>
+  <text x="15" y="76" fill="#666" font-size="10">selama 3 hari berturut-turut. Ketinggian air bervariasi 50-120 cm.</text>
+  <text x="15" y="92" fill="#666" font-size="10">Akses darat ke Kec. C terputus. Warga mengungsi ke 8 titik posko.</text>
+  <text x="15" y="108" fill="#666" font-size="10">Kebutuhan mendesak: air bersih, makanan siap saji, layanan kesehatan.</text>
+  <text x="15" y="124" fill="#666" font-size="10">IM Cell telah mengaktivasi mekanisme koordinasi data sektoral.</text>
+</g>
+
+<!-- IM Products side -->
+<g transform="translate(535, 165)">
+  <text x="0" y="14" fill="#333" font-size="11" font-weight="bold">▸ IM Products</text>
+
+  <rect x="0" y="22" width="120" height="46" rx="6" fill="#FFEBEE" stroke="#EF9A9A" stroke-width="1"/>
+  <text x="60" y="40" text-anchor="middle" fill="#D32F2F" font-size="20">🗺</text>
+  <text x="60" y="58" text-anchor="middle" fill="#D32F2F" font-size="9" font-weight="bold">Peta Situasi</text>
+
+  <rect x="128" y="22" width="120" height="46" rx="6" fill="#E3F2FD" stroke="#90CAF9" stroke-width="1"/>
+  <text x="188" y="40" text-anchor="middle" fill="#1565C0" font-size="20">📊</text>
+  <text x="188" y="58" text-anchor="middle" fill="#1565C0" font-size="9" font-weight="bold">Dashboard</text>
+
+  <rect x="0" y="76" width="248" height="46" rx="6" fill="#E8F5E9" stroke="#A5D6A7" stroke-width="1"/>
+  <text x="124" y="94" text-anchor="middle" fill="#2E7D32" font-size="20">📋</text>
+  <text x="124" y="112" text-anchor="middle" fill="#2E7D32" font-size="9" font-weight="bold">4W Matrix</text>
+</g>
+
+<line x1="20" y1="300" x2="780" y2="300" stroke="#E0E0E0" stroke-width="1"/>
+
+<!-- Bottom sections -->
+<g transform="translate(20, 310)">
+  <text x="0" y="14" fill="#333" font-size="11" font-weight="bold">▸ Per Sektor</text>
+  <rect x="0" y="22" width="240" height="40" rx="4" fill="#FFF3E0" stroke="#FFCC80" stroke-width="1"/>
+  <text x="120" y="38" text-anchor="middle" fill="#E65100" font-size="10" font-weight="bold">Kesehatan</text>
+  <text x="120" y="52" text-anchor="middle" fill="#999" font-size="9">3 Poskesdes, 2 RS rujukan</text>
+
+  <rect x="248" y="22" width="240" height="40" rx="4" fill="#E3F2FD" stroke="#90CAF9" stroke-width="1"/>
+  <text x="368" y="38" text-anchor="middle" fill="#1565C0" font-size="10" font-weight="bold">Air Bersih</text>
+  <text x="368" y="52" text-anchor="middle" fill="#999" font-size="9">5 unit water treatment</text>
+
+  <rect x="496" y="22" width="264" height="40" rx="4" fill="#E8F5E9" stroke="#A5D6A7" stroke-width="1"/>
+  <text x="628" y="38" text-anchor="middle" fill="#2E7D32" font-size="10" font-weight="bold">Pangan &amp; Logistik</text>
+  <text x="628" y="52" text-anchor="middle" fill="#999" font-size="9">Distribusi ke 8 posko aktif</text>
+</g>
+
+<line x1="20" y1="380" x2="780" y2="380" stroke="#E0E0E0" stroke-width="1"/>
+
+<!-- Footer -->
+<g transform="translate(20, 390)">
+  <text x="0" y="14" fill="#333" font-size="11" font-weight="bold">▸ Sumber &amp; Kontak</text>
+  <text x="0" y="34" fill="#999" font-size="9">Sumber data: BPBD, Dinas Kesehatan, PUPR, Data Posko, Tim Asesmen Lapangan</text>
+  <text x="0" y="50" fill="#999" font-size="9">Kontak: PIC IM Cell — Bpk. Andi (+62 812 3456 7890) | Koordinator Lapangan — Sdri. Rina</text>
+  <text x="0" y="68" fill="#999" font-size="9">SitRep berikutnya: 26 Juni 2026 pukul 16:00 WIB | Klasifikasi: INTERNAL — Tim IM Cell</text>
+</g>
+
+<rect x="2" y="492" width="796" height="6" fill="#D32F2F" rx="3"/>
+</svg>

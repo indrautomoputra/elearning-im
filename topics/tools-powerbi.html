@@ -1,0 +1,178 @@
+﻿<!doctype html>
+<html lang="id">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Power BI | IM Cell PMI</title>
+ <meta name="description" content="Panduan penggunaan Power BI untuk dashboard interaktif di IM Cell PMI." />
+ <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="../assets/css/main.css" />
+ <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+ <a href="#main" class="skip-link">Lompat ke konten utama</a>
+
+ <header class="site-header">
+ <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigasi"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+ <div class="logo">
+ <a href="../index.html">
+ <img class="logo-img logo-img-light" src="../assets/img/logo-header.svg" alt="IM Cell PMI" />
+ <img class="logo-img logo-img-dark" src="../assets/img/logo-header-white.svg" alt="IM Cell PMI" />
+ </a>
+ </div>
+ <div class="header-nav">
+ <div class="header-search">
+ <input id="global-search" type="search" placeholder="Cari..." />
+ <div id="search-results" class="search-results"></div>
+ </div>
+ <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"><svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+ </div>
+ </header>
+
+ <aside id="sidebar" class="sidebar">
+ <nav aria-label="Navigasi materi">
+ <ul id="sidebar-nav" class="sidebar-nav"></ul>
+ </nav>
+ </aside>
+
+ <main id="main" class="main-content">
+ <div id="breadcrumb" class="breadcrumb"></div>
+ <div id="content-body" class="content-body">
+ <p>Konten sedang dimuat... Jika tidak muncul dalam beberapa detik, <a href="../index.html">kembali ke Beranda</a>.</p>
+ </div>
+ </main>
+
+ <footer class="site-footer">
+ IM Cell PMI
+ <div class="footer-attr">Dibangun oleh <strong>@indrautomoputra</strong> - bukan dokumen resmi PMI/IFRC, untuk tujuan pembelajaran.</div>
+ </footer>
+
+ <script src="https://cdn.jsdelivr.net/npm/marked@15/marked.min.js"></script>
+ <script src="../assets/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/markdown" data-slug="tools-powerbi">
+# Power BI Dashboard Interaktif
+
+Alat untuk membuat dashboard interaktif yang memantau data operasi secara real-time.
+
+---
+
+## Kapan Dipakai
+
+Saat operasi butuh tampilan data yang bisa difilter dan dilihat banyak orang command center, briefing harian, laporan perkembangan.
+
+---
+
+## Yang Harus Kamu Bisa
+
+- [ ] Load data dari Excel/CSV
+- [ ] Transformasi data di Power Query (hapus baris kosong, ubah tipe)
+- [ ] Buat visual: Card, Bar Chart, Map, Slicer
+- [ ] Atur halaman dashboard (satu dashboard = satu tujuan)
+- [ ] Simpan file .pbix
+
+---
+
+## Langkah Kerja
+
+1. **Get Data** - Excel / CSV
+2. **Power Query** bersihkan data: hapus baris kosong, ubah tipe data (teks/angka/tanggal), hapus kolom tidak perlu
+3. **Model** jika pakai > 1 tabel, buat relasi antar tabel (drag key)
+4. **Visual** buat visual inti:
+ - **Card** angka ringkasan (total pengungsi, total posko)
+ - **Bar Chart** perbandingan per kecamatan
+ - **Map** sebaran lokasi
+ - **Slicer** filter interaktif (tanggal, wilayah)
+5. **Atur halaman** satu dashboard = satu topik. Pisahkan ke halaman berbeda
+6. **Simpan** File - Save As (.pbix)
+
+---
+
+## Tips
+
+- Maksimal 5-6 visual per halaman lebih dari itu sulit dibaca
+- Gunakan **slicer** untuk filter dinamis biarkan pengguna memilih tanggal atau wilayah
+- Simpan file .pbix secara lokal sebelum publish ke Power BI Service
+- Beri judul dashboard yang jelas "Situasi Banjir Kecamatan X - 25 Juni 2025"
+- Warna konsisten: pakai palet PMI (merah, putih, navy)
+
+---
+
+## Contoh Lapangan
+
+Kamu punya data pengungsi per kecamatan (Excel). Load ke Power BI. Buat Card untuk total pengungsi. Bar Chart untuk 5 kecamatan terdampak terbesar. Map untuk sebaran lokasi. Slicer untuk filter tanggal. Dashboard siap untuk briefing pagi.
+
+---
+
+## Tugas Praktik OJT
+
+1. Load data latihan dari Excel
+2. Buat 1 Card (total), 1 Bar Chart (per wilayah), 1 Map
+3. Tambah slicer filter tanggal
+4. Simpan file .pbix
+
+---
+
+## Checklist Cepat
+
+- [ ] Bisa load data dari Excel/CSV
+- [ ] Bisa buat Card, Bar Chart, Map
+- [ ] Slicer berfungsi untuk filter
+- [ ] File .pbix tersimpan
+
+---
+
+## Kesalahan Umum
+
+| Kesalahan | Dampak | Pencegahan |
+|-----------|--------|------------|
+| Terlalu banyak visual dalam 1 halaman | Dashboard rumit, sulit dibaca | Maks 5-6 visual per halaman |
+| Tidak pakai slicer | User tidak bisa filter data | Selalu tambah slicer |
+| Lupa transformasi tipe data | Visual error (angka jadi teks) | Cek tipe di Power Query |
+| Dashboard tanpa konteks | Pembaca tidak paham | Beri judul dan tanggal jelas |
+
+---
+
+## Eskalasi
+
+Hubungi pendamping jika:
+- Dashboard perlu di-publish ke Power BI Service (akses online)
+- Perlu koneksi ke data source langsung (bukan file static)
+
+---
+
+## Ringkasan Cepat
+
+- Satu dashboard = satu tujuan
+- Maks 5-6 visual per halaman
+- Slicer penting untuk filter dinamis
+- Simpan .pbix lokal sebelum publish
+</script>
+</body>
+</html>
+
