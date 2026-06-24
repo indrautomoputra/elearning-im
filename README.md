@@ -7,7 +7,7 @@
 
 Panduan belajar dan referensi operasional untuk Information Management Cell PMI, mencakup materi IM, tools, dan OJT.
 
-Dibangun oleh [@indrautomoputra](https://github.com/indrautomoputra). Bukan dokumen resmi PMI atau IFRC - murni untuk keperluan pembelajaran.
+Dapat diakses disini https://indrautomoputra.github.io/elearning-im/
 
 ## Tentang Project
 
