@@ -1,8 +1,8 @@
-# IM Cell PMI — Panduan Belajar & Operasional
+# IM Cell PMI - Panduan Belajar & Operasional
 
 Panduan belajar dan referensi operasional untuk Information Management Cell PMI, mencakup materi IM, tools, dan OJT.
 
-Dibangun oleh [@indrautomoputra](https://github.com/indrautomoputra). Bukan dokumen resmi PMI atau IFRC — murni untuk keperluan pembelajaran.
+Dibangun oleh [@indrautomoputra](https://github.com/indrautomoputra). Bukan dokumen resmi PMI atau IFRC - murni untuk keperluan pembelajaran.
 
 ## Tentang Project
 
@@ -12,15 +12,15 @@ Relawan dapat mengakses 8 topik inti + 4 panduan tools, menyelesaikan tugas OJT 
 
 ## Fitur
 
-- **8 Topik Inti** — dari Memahami IM hingga Peran Relawan Lokal
-- **4 Panduan Tools** — KoboToolbox, Excel, QGIS, Power BI
-- **Panduan OJT di Posko** — alur harian dan target mingguan
-- **Pencarian Global** — pencarian client-side di semua halaman
-- **Mode Gelap/Terang** — toggle tema dengan persistensi localStorage
-- **Kalkulator PIN Interaktif** — hitung People in Need langsung di halaman
-- **Navigasi Samping** — sidebar dengan daftar isi otomatis dan breadcrumbs
-- **Responsive** — mendukung desktop, tablet, dan ponsel
-- **Mendukung Offline Fallback** — Markdown termuat via fetch, dengan fallback inline
+- **8 Topik Inti** - dari Memahami IM hingga Peran Relawan Lokal
+- **4 Panduan Tools** - KoboToolbox, Excel, QGIS, Power BI
+- **Panduan OJT di Posko** - alur harian dan target mingguan
+- **Pencarian Global** - pencarian client-side di semua halaman
+- **Mode Gelap/Terang** - toggle tema dengan persistensi localStorage
+- **Kalkulator PIN Interaktif** - hitung People in Need langsung di halaman
+- **Navigasi Samping** - sidebar dengan daftar isi otomatis dan breadcrumbs
+- **Responsive** - mendukung desktop, tablet, dan ponsel
+- **Mendukung Offline Fallback** - Markdown termuat via fetch, dengan fallback inline
 
 ## Tech Stack
 
@@ -73,8 +73,8 @@ elearning-im/
 
 Setiap topik memiliki dua file:
 
-- **`topik.md`** — sumber konten Markdown murni
-- **`topik.html`** — shell HTML dengan layout (header, sidebar, breadcrumbs, footer). Saat runtime, `main.js` mengambil file `.md` via `fetch()` dan me-render-nya dengan `marked.js`. Jika gagal, fallback ke konten inline di `<script type="text/markdown">`.
+- **`topik.md`** - sumber konten Markdown murni
+- **`topik.html`** - shell HTML dengan layout (header, sidebar, breadcrumbs, footer). Saat runtime, `main.js` mengambil file `.md` via `fetch()` dan me-render-nya dengan `marked.js`. Jika gagal, fallback ke konten inline di `<script type="text/markdown">`.
 
 ### Struktur Konten Topik
 
@@ -114,9 +114,9 @@ Kontribusi dari relawan, pendamping, atau siapa pun di komunsi IM Cell PMI sanga
 
 1. **Fork repository ini** ke akun GitHub kamu.
 2. **Buat branch** untuk perubahanmu: `git checkout -b fix/typo` atau `feature/nama-fitur`.
-3. **Lakukan perubahan** — pastikan mengikuti pola dan struktur yang sudah ada.
-4. **Uji perubahan** — buka file HTML di browser, pastikan tidak ada error.
-5. **Buat Pull Request** — jelaskan apa yang diubah dan mengapa.
+3. **Lakukan perubahan** - pastikan mengikuti pola dan struktur yang sudah ada.
+4. **Uji perubahan** - buka file HTML di browser, pastikan tidak ada error.
+5. **Buat Pull Request** - jelaskan apa yang diubah dan mengapa.
 
 ### Yang Bisa Dibantu
 
@@ -148,4 +148,4 @@ Kontribusi dari relawan, pendamping, atau siapa pun di komunsi IM Cell PMI sanga
 
 ## Lisensi
 
-Hak cipta © 2025 — Untuk pembelajaran dan penggunaan internal komunitas IM Cell PMI.
+Hak cipta © 2025 - Untuk pembelajaran dan penggunaan internal komunitas IM Cell PMI.

@@ -44,35 +44,11 @@
  <div class="hero-content">
  <h1><em>Information Management</em><br />IM Cell PMI</h1>
  <p>Platform pembelajaran Information Management untuk Tim IM Cell PMI. Bukan kelas formal, langsung praktik, langsung berguna di posko.</p>
- <a href="#topik" class="hero-cta">Mulai Belajar &darr;</a>
+  <a href="#topik" class="hero-cta">Mulai Belajar</a>
  <div class="disclaimer">
  <strong>Disclaimer:</strong> Materi ini merupakan rangkuman pembelajaran Information Management untuk Tim IM Cell PMI dan <strong>bukan</strong> dokumen resmi PMI atau IFRC.
  </div>
- </div>
- <!-- Hero visual: network node SVG -->
- <div class="hero-visual">
- <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
- <circle cx="120" cy="100" r="7" fill="#EF4444" opacity="0.8"/>
- <circle cx="280" cy="80" r="7" fill="#EF4444" opacity="0.8"/>
- <circle cx="200" cy="200" r="10" fill="#FFFFFF" opacity="0.95"/>
- <circle cx="100" cy="230" r="5" fill="#EF4444" opacity="0.6"/>
- <circle cx="300" cy="210" r="5" fill="#EF4444" opacity="0.6"/>
- <circle cx="330" cy="140" r="5" fill="#EF4444" opacity="0.6"/>
- <circle cx="75" cy="160" r="5" fill="#EF4444" opacity="0.6"/>
- <circle cx="160" cy="140" r="4" fill="#EF4444" opacity="0.4"/>
- <circle cx="250" cy="130" r="4" fill="#EF4444" opacity="0.4"/>
- <line x1="120" y1="100" x2="200" y2="200" stroke="#EF4444" stroke-width="1.5" opacity="0.35"/>
- <line x1="280" y1="80" x2="200" y2="200" stroke="#EF4444" stroke-width="1.5" opacity="0.35"/>
- <line x1="100" y1="230" x2="200" y2="200" stroke="#EF4444" stroke-width="1" opacity="0.25"/>
- <line x1="300" y1="210" x2="200" y2="200" stroke="#EF4444" stroke-width="1" opacity="0.25"/>
- <line x1="330" y1="140" x2="200" y2="200" stroke="#EF4444" stroke-width="1" opacity="0.25"/>
- <line x1="75" y1="160" x2="200" y2="200" stroke="#EF4444" stroke-width="1" opacity="0.25"/>
- <line x1="160" y1="140" x2="200" y2="200" stroke="#EF4444" stroke-width="1" opacity="0.2"/>
- <line x1="250" y1="130" x2="200" y2="200" stroke="#EF4444" stroke-width="1" opacity="0.2"/>
- <path d="M120 100 Q200 40 280 80" stroke="#FFFFFF" stroke-width="1.5" opacity="0.15" fill="none"/>
- <path d="M75 160 Q200 290 330 140" stroke="#FFFFFF" stroke-width="1" opacity="0.1" fill="none"/>
- </svg>
- </div>
+  </div>
  </section>
 
  <!-- Tentang Platform -->
@@ -158,14 +134,65 @@
 
  <section id="kontribusi" class="about-section contribute-section">
  <h2>Berkontribusi</h2>
- <p>Project ini dikelola oleh <strong>@indrautomoputra</strong> dan terbuka untuk kontribusi. Lihat <a href="https://github.com/indrautomoputra/elearning-im">README.md</a> untuk panduan lengkap.</p>
+ <p>Kontribusi dari relawan, pendamping, atau siapa pun di komunitas IM Cell PMI sangat terbuka.</p>
+ <p>Repo: <a href="https://github.com/indrautomoputra/elearning-im">github.com/indrautomoputra/elearning-im</a></p>
+
+ <h3>Panduan</h3>
+ <ol class="guide-steps">
+  <li><strong>Fork repository ini</strong> ke akun GitHub kamu.</li>
+  <li><strong>Buat branch</strong> untuk perubahanmu: <code>git checkout -b fix/typo</code> atau <code>feature/nama-fitur</code>.</li>
+  <li><strong>Lakukan perubahan</strong> - pastikan mengikuti pola dan struktur yang sudah ada.</li>
+  <li><strong>Uji perubahan</strong> - buka file HTML di browser, pastikan tidak ada error.</li>
+  <li><strong>Buat Pull Request</strong> - jelaskan apa yang diubah dan mengapa.</li>
+ </ol>
+
+ <h3>Yang Bisa Dibantu</h3>
+ <div class="block-grid">
+  <div class="block-card"><h3>Konten</h3><p>Memperbaiki typo, menambahkan contoh lapangan, memperbarui data</p></div>
+  <div class="block-card"><h3>Visual</h3><p>Menambahkan grafik, diagram, atau infografis baru</p></div>
+  <div class="block-card"><h3>Kode</h3><p>Memperbaiki bug CSS/JS, meningkatkan aksesibilitas, optimasi performa</p></div>
+  <div class="block-card"><h3>Konten Baru</h3><p>Menambahkan topik baru, panduan tool, atau studi kasus</p></div>
+  <div class="block-card"><h3>Laporkan Masalah</h3><p>Buka <a href="https://github.com/indrautomoputra/elearning-im/issues">issue</a> di GitHub</p></div>
+ </div>
+
+ <div class="pedoman-grid">
+  <div>
+   <h3>Pedoman Konten</h3>
+   <ul>
+    <li>Gunakan bahasa Indonesia yang sederhana dan praktis</li>
+    <li>Hindari jargon yang tidak perlu; jika ada, jelaskan</li>
+    <li>Setiap topik harus punya contoh lapangan dan tugas praktik</li>
+    <li>Tulis dari sudut pandang relawan di posko</li>
+    <li>Sertakan kapan harus eskalasi ke IM senior</li>
+   </ul>
+  </div>
+  <div>
+   <h3>Pedoman Kode</h3>
+   <ul>
+    <li>CSS: Gunakan design tokens dari <code>tokens.css</code></li>
+    <li>JS: Ikuti gaya kode yang sudah ada (vanilla JS)</li>
+    <li>HTML: Setiap halaman harus punya aksesibilitas dasar</li>
+    <li>Pastikan mode terang dan gelap tetap terbaca</li>
+    <li>Uji di Chrome dan Firefox sebelum Pull Request</li>
+   </ul>
+  </div>
+ </div>
  </section>
  </main>
 
  <!-- Footer -->
  <footer class="site-footer">
- IM Cell PMI
- <div class="footer-attr">Dibangun oleh <strong>@indrautomoputra</strong> � bukan dokumen resmi PMI/IFRC, untuk tujuan pembelajaran.</div>
+  <div class="footer-main">
+   <div>
+    IM Cell PMI
+    <div class="footer-attr">Dibangun oleh <strong>@indrautomoputra</strong> - bukan dokumen resmi PMI/IFRC, untuk tujuan pembelajaran.</div>
+   </div>
+   <div class="footer-logos">
+    <span class="footer-support">Didukung oleh</span>
+    <a href="https://pmi.or.id/" target="_blank" rel="noopener"><img src="assets/img/logo-pmi.svg" alt="PMI" class="footer-logo" /></a>
+    <a href="https://www.ifrc.org/" target="_blank" rel="noopener"><img src="assets/img/logo-ifrc.svg" alt="IFRC" class="footer-logo footer-logo-ifrc" /></a>
+   </div>
+  </div>
  </footer>
 
  <!-- JS: render markdown, navigasi, pencarian, tema -->

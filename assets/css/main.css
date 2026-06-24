@@ -1,5 +1,5 @@
 /* =============================================================
-   main.css � Gaya utama untuk Modul IM Cell PMI
+   main.css - Gaya utama untuk Modul IM Cell PMI
    Impor tokens.css (variabel desain), lalu reset + tata letak.
    ============================================================= */
 @import url('tokens.css');
@@ -209,16 +209,18 @@ html { scroll-padding-top: calc(var(--header-height) + 12px); }
 
 .sidebar-nav { list-style: none; }
 
+.sidebar-nav .sep,
 .sidebar-nav .nav-section {
   padding: 16px 24px 8px;
   font-family: var(--font-heading);
-  font-size: var(--text-sm); font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--color-gray-500);
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gray-400);
 }
 
 .sidebar-nav li { border-left: 3px solid transparent; }
-.sidebar-nav li.sub a { padding-left: 40px; font-size: var(--text-sm); color: var(--color-gray-500); }
+.sidebar-nav li.sub a { padding-left: 40px; font-size: 0.75rem; color: var(--color-gray-500); }
 .sidebar-nav li.sub.active { border-left-color: var(--color-red); }
 .sidebar-nav li.sub.active a { color: var(--color-red); }
 
@@ -234,16 +236,16 @@ html { scroll-padding-top: calc(var(--header-height) + 12px); }
 }
 
 .sidebar-nav a {
-  padding: 8px 24px;
-  font-size: var(--text-md); font-weight: 500;
-  color: var(--color-gray-700);
+  padding: 6px 24px;
+  font-size: var(--text-sm); font-weight: 600;
+  color: var(--color-gray-600);
   display: flex; align-items: center; gap: 8px;
 }
 
 .sidebar-nav a:hover { color: var(--color-red); }
 
 .sidebar-nav li.active a {
-  color: var(--color-navy); font-weight: 600;
+  color: var(--color-navy); font-weight: 700;
 }
 
 /* -- MAIN CONTENT -- */
@@ -416,9 +418,11 @@ html { scroll-padding-top: calc(var(--header-height) + 12px); }
 
 /* -- ABOUT SECTION -- */
 .about-section {
-  padding: 16px 56px 56px;
+  padding: 48px 56px 56px;
   max-width: 1100px; margin: 0 auto;
 }
+.about-section:first-of-type { padding-top: 64px; }
+.about-section:first-of-type h2 { border-top: none; }
 
 .about-section h2 {
   font-family: var(--font-heading);
@@ -473,9 +477,22 @@ html { scroll-padding-top: calc(var(--header-height) + 12px); }
   font-size: var(--text-base); color: var(--color-gray-500);
   background: var(--color-white);
 }
-
+.site-footer .footer-main {
+  display: flex; justify-content: space-between; align-items: center;
+  max-width: 1100px; margin: 0 auto;
+}
 .site-footer .footer-attr {
   color: var(--color-gray-400); font-size: var(--text-sm); margin-top: 4px;
+}
+.site-footer .footer-logos {
+  display: flex; align-items: center; gap: 12px;
+}
+.site-footer .footer-support {
+  font-size: var(--text-sm); color: var(--color-gray-400);
+  font-style: italic;
+}
+.site-footer .footer-logo {
+  height: 30px; width: auto;
 }
 
 .main-content.landing ~ .site-footer { margin-left: 0; }
@@ -895,7 +912,8 @@ html { scroll-padding-top: calc(var(--header-height) + 12px); }
   .chart-bar-label { text-align: left; font-size: var(--text-sm); }
   .stat-card .stat-number { font-size: 1.5rem; }
 
-  .about-section { padding: 16px 20px 32px; }
+  .about-section { padding: 32px 20px 32px; }
+  .about-section:first-of-type { padding-top: 40px; }
   .about-section h2 { font-size: 1.2rem; }
   .block-grid { grid-template-columns: 1fr; }
 
@@ -911,8 +929,8 @@ html { scroll-padding-top: calc(var(--header-height) + 12px); }
   .header-nav { gap: 8px; }
   .search-results { position: fixed; top: var(--header-height); left: 0; right: 0; max-height: 50vh; border-radius: 0; }
 
-  .sidebar-nav .nav-section { font-size: 0.7rem; }
-  .sidebar-nav a { font-size: var(--text-base); }
+  .sidebar-nav .nav-section { font-size: 0.65rem; }
+  .sidebar-nav a { font-size: 0.75rem; }
   .breadcrumb { font-size: var(--text-sm); }
 }
 
@@ -922,7 +940,8 @@ html { scroll-padding-top: calc(var(--header-height) + 12px); }
   .hero { padding: 64px 32px; }
   .stats-section { padding: 32px; }
   .chart-section { padding: 0 32px 32px; }
-  .about-section { padding: 16px 32px 32px; }
+  .about-section { padding: 40px 32px 48px; }
+  .about-section:first-of-type { padding-top: 48px; }
 }
 
 /* Dark mode overrides */

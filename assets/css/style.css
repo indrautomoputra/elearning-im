@@ -1,8 +1,8 @@
 /* =============================================================
-   style.css � Gaya kustom untuk IM Cell PMI
+   style.css - Gaya kustom untuk IM Cell PMI
    main.css dan tokens.css sudah diload via <link> di HTML.
    =============================================================
-   Card grid � layout kartu di index.md
+   Card grid - layout kartu di index.md
    ============================================================= */
 .card-grid {
   display: grid;
@@ -12,7 +12,7 @@
 }
 
 /* =============================================================
-   Visual grid � layout grafik di index.md
+   Visual grid - layout grafik di index.md
    ============================================================= */
 .visual-grid {
   display: grid;
@@ -43,7 +43,7 @@
 }
 
 /* =============================================================
-   Ref grid � grafik referensi cepat di index.html
+   Ref grid - grafik referensi cepat di index.html
    ============================================================= */
 .ref-grid {
   display: grid;
@@ -54,7 +54,7 @@
 .ref-grid img { max-width: 100%; height: auto; border-radius: 4px; }
 
 /* =============================================================
-   Kartu Topik � digunakan di index.md dan halaman daftar topik
+   Kartu Topik - digunakan di index.md dan halaman daftar topik
    ============================================================= */
 .topic-grid {
   display: grid;
@@ -137,16 +137,18 @@
 .topic-card.accent-orange::before { background: var(--color-orange); }
 
 /* =============================================================
-   HERO � redesain
+   HERO - redesain
    ============================================================= */
 .hero {
-  background: linear-gradient(135deg, #011E41 0%, #001845 100%);
+  background: linear-gradient(to right, rgba(1,30,65,0.92) 0%, rgba(1,30,65,0.7) 35%, transparent 65%),
+              url('../img/people_red.jpg') center / cover no-repeat;
   color: var(--color-on-accent); padding: 80px 56px 64px;
   position: relative;
   overflow: hidden;
 }
 [data-theme="dark"] .hero {
-  background: linear-gradient(135deg, #0F1117 0%, #1A1D28 100%);
+  background: linear-gradient(to right, rgba(15,17,23,0.95) 0%, rgba(15,17,23,0.75) 35%, transparent 65%),
+              url('../img/people_red.jpg') center / cover no-repeat;
 }
 
 .hero-content {
@@ -154,19 +156,6 @@
   z-index: 2;
   max-width: 640px;
 }
-
-.hero-visual {
-  position: absolute;
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 340px;
-  height: 260px;
-  opacity: 0.7;
-  z-index: 1;
-  pointer-events: none;
-}
-.hero-visual svg { width: 100%; height: 100%; }
 
 .hero h1 {
   font-family: var(--font-heading);
@@ -225,7 +214,6 @@
 .hero .disclaimer strong { color: inherit; opacity: 0.9; }
 
 @media (max-width: 900px) {
-  .hero-visual { display: none; }
 }
 
 /* =============================================================
@@ -264,7 +252,7 @@ details.collapsible-section .ref-grid {
 }
 
 /* =============================================================
-   Placeholder gambar � untuk grafik yang belum tersedia
+   Placeholder gambar - untuk grafik yang belum tersedia
    ============================================================= */
 .img-placeholder {
   display: flex;
@@ -358,7 +346,24 @@ details.collapsible-section .ref-grid {
 }
 
 /* =============================================================
-   Image container � responsive dengan caption
+   Contribute section - pedoman grid + guide steps
+   ============================================================= */
+.pedoman-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 24px 0 0;
+}
+@media (max-width: 640px) {
+  .pedoman-grid { grid-template-columns: 1fr; }
+}
+.guide-steps li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* =============================================================
+   Image container - responsive dengan caption
    ============================================================= */
 .img-container {
   margin: 16px 0;
