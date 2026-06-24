@@ -8,7 +8,7 @@ IM Cell PMI menggunakan 4 alat utama. Masing-masing punya fungsi spesifik dalam 
 
 | Tools | Fungsi | Dipakai Saat |
 |-------|--------|-------------|
-| [KoboToolbox](tools-kobotoolbox.html) | Membuat form & kumpulkan data lapangan | Assessment, survei, monitoring |
+| [KoboToolbox](tools-kobotoolbox.html) | Membuat form & kumpulkan data lapangan — [Buat XLSForm &#8599;](https://xlsform.aiim.space/) | Assessment, survei, monitoring |
 | [Excel](tools-excel.html) | Olah data tabular, matching, ringkasan | Setiap hari - cleaning, pivot, lookup |
 | [QGIS](tools-qgis.html) | Peta & analisis spasial | Situasi, sebaran, buffer analysis |
 | [Power BI](tools-powerbi.html) | Dashboard interaktif | Presentasi, command center, update harian |

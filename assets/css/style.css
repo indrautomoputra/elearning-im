@@ -97,12 +97,13 @@
   transform: scale(0.98);
 }
 
+.topic-icon { width: 20px; height: 20px; flex-shrink: 0; color: var(--color-red); }
+.topic-card .topic-head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
 .topic-card h3 {
   font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 600;
   color: var(--color-navy);
-  margin-bottom: 8px;
 }
 
 .topic-card p {

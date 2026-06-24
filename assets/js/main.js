@@ -11,22 +11,23 @@ if (markedLib) {
 function initSidebar() {
   const nav = document.getElementById('sidebar-nav');
   if (!nav) return;
-  const items = [
-    { label: 'Beranda', href: BASE_PATH + 'index.html', icon: '#' },
-    { label: '1. Memahami IM', href: BASE_PATH + 'topics/01-memahami-im.html', icon: '1' },
-    { label: '2. Setup & Orientasi Sistem', href: BASE_PATH + 'topics/02-setup-orientasi-sistem.html', icon: '2' },
-    { label: '3. Tools Operasional', href: BASE_PATH + 'topics/03-tools-operasional.html', icon: '3' },
-    { label: '4. Analisis Kebutuhan', href: BASE_PATH + 'topics/04-analisis-kebutuhan.html', icon: '4' },
-    { label: '5. PIN & Prioritas', href: BASE_PATH + 'topics/05-pin-prioritas.html', icon: '5' },
-    { label: '6. Produk IM', href: BASE_PATH + 'topics/06-produk-im.html', icon: '6' },
-    { label: '7. Paket Data & RenOps', href: BASE_PATH + 'topics/07-paket-data-renops.html', icon: '7' },
-  ];
-  nav.innerHTML = items
-    .map(
-      (item) =>
-        `<li><a href="${item.href}" ${location.pathname.includes(item.href.split('/').pop()) ? 'class="active"' : ''}><span class="nav-icon">${item.icon}</span>${item.label}</a></li>`
-    )
-    .join('');
+  const currentFile = location.pathname.split('/').pop();
+  const isActive = (href) => currentFile === href.split('/').pop() ? 'active' : '';
+  nav.innerHTML = `
+    <li class="${isActive('index.html')}"><a href="${BASE_PATH}index.html">Beranda</a></li>
+    <li class="${isActive('01-memahami-im.html')}"><a href="${BASE_PATH}topics/01-memahami-im.html">1. Memahami IM</a></li>
+    <li class="${isActive('02-setup-orientasi-sistem.html')}"><a href="${BASE_PATH}topics/02-setup-orientasi-sistem.html">2. Setup &amp; Orientasi Sistem</a></li>
+    <li class="${isActive('03-tools-operasional.html')}"><a href="${BASE_PATH}topics/03-tools-operasional.html">3. Tools Operasional</a></li>
+    <li class="sub ${isActive('tools-kobotoolbox.html')}"><a href="${BASE_PATH}topics/tools-kobotoolbox.html">KoboToolbox</a></li>
+    <li class="sub ${isActive('tools-excel.html')}"><a href="${BASE_PATH}topics/tools-excel.html">Excel</a></li>
+    <li class="sub ${isActive('tools-qgis.html')}"><a href="${BASE_PATH}topics/tools-qgis.html">QGIS</a></li>
+    <li class="sub ${isActive('tools-powerbi.html')}"><a href="${BASE_PATH}topics/tools-powerbi.html">Power BI</a></li>
+    <li class="${isActive('04-analisis-kebutuhan.html')}"><a href="${BASE_PATH}topics/04-analisis-kebutuhan.html">4. Analisis Kebutuhan</a></li>
+    <li class="${isActive('05-pin-prioritas.html')}"><a href="${BASE_PATH}topics/05-pin-prioritas.html">5. PIN &amp; Prioritas</a></li>
+    <li class="${isActive('06-produk-im.html')}"><a href="${BASE_PATH}topics/06-produk-im.html">6. Produk IM</a></li>
+    <li class="${isActive('07-paket-data-renops.html')}"><a href="${BASE_PATH}topics/07-paket-data-renops.html">7. Paket Data &amp; RenOps</a></li>
+    <li class="${isActive('08-relawan-lokal.html')}"><a href="${BASE_PATH}topics/08-relawan-lokal.html">8. Peran Relawan Lokal</a></li>
+  `;
 }
 
 const SLUG_PATHS = {
@@ -40,49 +41,6 @@ function resolveMdPath(slug) {
   if (slug.includes('/')) return BASE_PATH + slug;
   if (slug === 'index') return BASE_PATH + 'index.md';
   return BASE_PATH + 'topics/' + slug + '.md';
-}
-
-let allMarkdownCache = null;
-
-async function loadAllMarkdown() {
-  if (allMarkdownCache) return allMarkdownCache;
-  const slugs = [
-    'index',
-    '01-memahami-im',
-    '02-setup-orientasi-sistem',
-    '03-tools-operasional',
-    '04-analisis-kebutuhan',
-    '05-pin-prioritas',
-    '06-produk-im',
-    '07-paket-data-renops',
-    'tools-kobotoolbox',
-    'tools-excel',
-    'tools-powerbi',
-    'tools-qgis',
-    'checklists-index',
-    'templates-index',
-    'content/setup-orientasi-sistem',
-    'content/memahami-im',
-    'content/kerangka-analisis-kajian',
-    'content/menghitung-pin-prioritas',
-    'content/model-pelaporan',
-    'content/paket-data-renops',
-    'content/panduan-tools-operasional',
-  ];
-  const cache = {};
-  const results = await Promise.allSettled(
-    slugs.map(async (slug) => {
-      const path = resolveMdPath(slug);
-      const res = await fetch(path);
-      if (!res.ok) throw new Error(`fetch ${path} failed: ${res.status}`);
-      cache[slug] = await res.text();
-    })
-  );
-  for (const r of results) {
-    if (r.status === 'rejected') console.warn(r.reason);
-  }
-  allMarkdownCache = cache;
-  return cache;
 }
 
 async function renderPage() {
@@ -136,6 +94,7 @@ async function renderPage() {
   renderToc();
   renderBreadcrumb(slug);
   highlightCurrentNav();
+  renderTopicNav(slug);
 }
 
 function renderToc() {
@@ -148,7 +107,7 @@ function renderToc() {
   const wrapper = document.createElement('div');
   wrapper.className = 'toc';
 
-  let html = '<details open><summary><strong>Daftar Isi</strong></summary><ul>';
+  let html = '<details><summary><strong>Daftar Isi</strong></summary><ul>';
   headings.forEach((h) => {
     if (!h.id) {
       h.id = h.textContent.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -195,55 +154,90 @@ function highlightCurrentNav() {
   });
 }
 
+function renderTopicNav(slug) {
+  const nav = document.getElementById('topic-nav');
+  if (!nav) return;
+  const topics = [
+    '01-memahami-im', '02-setup-orientasi-sistem', '03-tools-operasional',
+    '04-analisis-kebutuhan', '05-pin-prioritas', '06-produk-im',
+    '07-paket-data-renops', '08-relawan-lokal',
+  ];
+  const idx = topics.indexOf(slug);
+  if (idx < 0) { nav.innerHTML = ''; nav.style.display = 'none'; return; }
+  const labels = {
+    '01-memahami-im': 'Memahami IM', '02-setup-orientasi-sistem': 'Setup & Orientasi Sistem',
+    '03-tools-operasional': 'Tools Operasional', '04-analisis-kebutuhan': 'Analisis Kebutuhan',
+    '05-pin-prioritas': 'PIN & Prioritas', '06-produk-im': 'Produk IM',
+    '07-paket-data-renops': 'Paket Data & RenOps', '08-relawan-lokal': 'Peran Relawan Lokal',
+  };
+  const prev = idx > 0 ? topics[idx - 1] : null;
+  const next = idx < topics.length - 1 ? topics[idx + 1] : null;
+  const p = prev ? `<a href="${BASE_PATH}topics/${prev}.html" class="nav-prev">&larr; ${labels[prev]}</a>` : '';
+  const n = next ? `<a href="${BASE_PATH}topics/${next}.html" class="nav-next">${labels[next]} &rarr;</a>` : '';
+  nav.innerHTML = p + n;
+  nav.style.display = 'flex';
+}
+
 function initSearch() {
   const input = document.getElementById('global-search');
   const results = document.getElementById('search-results');
   if (!input || !results) return;
 
+  const pages = [
+    { label: 'Beranda', href: BASE_PATH + 'index.html' },
+    { label: 'Memahami IM', href: BASE_PATH + 'topics/01-memahami-im.html' },
+    { label: 'Setup & Orientasi Sistem', href: BASE_PATH + 'topics/02-setup-orientasi-sistem.html' },
+    { label: 'Tools Operasional', href: BASE_PATH + 'topics/03-tools-operasional.html' },
+    { label: 'Analisis Kebutuhan', href: BASE_PATH + 'topics/04-analisis-kebutuhan.html' },
+    { label: 'PIN & Prioritas', href: BASE_PATH + 'topics/05-pin-prioritas.html' },
+    { label: 'Produk IM', href: BASE_PATH + 'topics/06-produk-im.html' },
+    { label: 'Paket Data & RenOps', href: BASE_PATH + 'topics/07-paket-data-renops.html' },
+    { label: 'Peran Relawan Lokal', href: BASE_PATH + 'topics/08-relawan-lokal.html' },
+    { label: 'KoboToolbox', href: BASE_PATH + 'topics/tools-kobotoolbox.html' },
+    { label: 'Excel', href: BASE_PATH + 'topics/tools-excel.html' },
+    { label: 'Power BI', href: BASE_PATH + 'topics/tools-powerbi.html' },
+    { label: 'QGIS', href: BASE_PATH + 'topics/tools-qgis.html' },
+    { label: 'Checklist', href: BASE_PATH + 'checklists/checklists-index.html' },
+    { label: 'Template', href: BASE_PATH + 'templates/templates-index.html' },
+    { label: 'OJT di Posko', href: BASE_PATH + 'ojt/ojt-di-posko.html' },
+  ];
+
   let debounceTimer;
 
   input.addEventListener('input', () => {
     clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(async () => {
+    debounceTimer = setTimeout(() => {
       const q = input.value.trim().toLowerCase();
-      if (!q || q.length < 2) {
+      if (!q) {
         results.innerHTML = '';
         results.classList.remove('visible');
         return;
       }
 
-      try {
-        const cache = await loadAllMarkdown();
-        const hits = [];
-        for (const [slug, text] of Object.entries(cache)) {
-          if (!text) continue;
-          const lines = text.split('\n');
-          for (let i = 0; i < lines.length; i++) {
-            if (lines[i].toLowerCase().includes(q)) {
-              const label = slug.replace(/^(topics\/|content\/)/, '').replace(/[_-]/g, ' ');
-              const href = SLUG_PATHS[slug] ? BASE_PATH + SLUG_PATHS[slug].replace('.md', '.html') : slug === 'index' ? BASE_PATH + 'index.html' : slug.startsWith('content/') ? BASE_PATH + slug.replace('content/', '') + '.html' : BASE_PATH + 'topics/' + slug + '.html';
-              hits.push({ label, href, line: lines[i].trim(), lineNum: i + 1 });
-              if (hits.length >= 10) break;
-            }
-          }
-          if (hits.length >= 10) break;
-        }
-
-        if (hits.length === 0) {
-          results.innerHTML = '<div class="search-empty">Tidak ditemukan</div>';
-        } else {
-          results.innerHTML = hits
-            .map(
-              (h) =>
-                `<a href="${h.href}" class="search-item"><strong>${h.label}</strong> <small>baris ${h.lineNum}</small><br><span>${h.line.slice(0, 100)}</span></a>`
-            )
-            .join('');
-        }
-        results.classList.add('visible');
-      } catch (e) {
-        console.warn('Search error:', e);
+      const hits = pages.filter(p => p.label.toLowerCase().includes(q));
+      if (hits.length === 0) {
+        results.innerHTML = '<div class="search-empty">Tidak ditemukan</div>';
+      } else {
+        results.innerHTML = hits.map(h =>
+          `<a href="${h.href}" class="search-item"><strong>${h.label}</strong></a>`
+        ).join('');
       }
-    }, 300);
+      results.classList.add('visible');
+    }, 150);
+  });
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const first = results.querySelector('.search-item');
+      if (first) { first.click(); e.preventDefault(); }
+    }
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      const items = [...results.querySelectorAll('.search-item')];
+      const idx = items.indexOf(document.activeElement?.closest('.search-item'));
+      const next = e.key === 'ArrowDown' ? idx + 1 : idx - 1;
+      if (items[next]) items[next].focus();
+      e.preventDefault();
+    }
   });
 
   document.addEventListener('click', (e) => {
