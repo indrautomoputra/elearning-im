@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="id">
 <head>
+ <!-- Meta & font: charset, viewport, OG, favicon, Google Fonts, CSS -->
  <meta charset="UTF-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <title>IM Cell PMI</title>
@@ -17,8 +18,10 @@
  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+ <!-- Skip-link: aksesibilitas keyboard -->
  <a href="#main" class="skip-link">Lompat ke konten utama</a>
 
+ <!-- Header: logo, pencarian, toggle tema -->
  <header class="site-header">
  <div class="logo">
  <a href="index.html">
@@ -37,6 +40,7 @@
 
  <main id="main" class="main-content landing">
  <section class="hero">
+ <!-- Hero: judul, deskripsi, CTA -->
  <div class="hero-content">
  <h1><em>Information Management</em><br />IM Cell PMI</h1>
  <p>Platform pembelajaran Information Management untuk Tim IM Cell PMI. Bukan kelas formal, langsung praktik, langsung berguna di posko.</p>
@@ -45,6 +49,7 @@
  <strong>Disclaimer:</strong> Materi ini merupakan rangkuman pembelajaran Information Management untuk Tim IM Cell PMI dan <strong>bukan</strong> dokumen resmi PMI atau IFRC.
  </div>
  </div>
+ <!-- Hero visual: network node SVG -->
  <div class="hero-visual">
  <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
  <circle cx="120" cy="100" r="7" fill="#EF4444" opacity="0.8"/>
@@ -70,6 +75,7 @@
  </div>
  </section>
 
+ <!-- Tentang Platform -->
  <section id="tentang" class="about-section">
   <h2>Tentang Platform Ini</h2>
  <p>IM Cell PMI dirancang untuk kamu relawan lokal yang sedang atau akan bertugas di posko bencana. Semua materi langsung terkait dengan kerja nyata: dari setup sistem, analisis data, sampai menyusun paket data untuk RenOps.</p>
@@ -81,7 +87,9 @@
  <section id="topik" class="about-section">
  <h2>Mulai Belajar</h2>
  <p>Pilih topik sesuai kebutuhanmu di posko:</p>
+ <!-- Daftar Topik Belajar -->
  <div class="topic-grid">
+ <!-- Kartu topik 1-8 -->
    <a href="topics/01-memahami-im.html" class="topic-card">
   <img class="topic-icon topic-icon-light" src="assets/img/topic-01-colour.svg" alt=""><img class="topic-icon topic-icon-dark" src="assets/img/topic-01-white.svg" alt="">
   <div class="topic-body"><div class="topic-head"><h3>Memahami IM</h3></div>
@@ -135,14 +143,15 @@
 
 
 
+ <!-- Grafik Referensi Cepat (collapsible) -->
  <section class="about-section">
  <details class="collapsible-section">
  <summary><h2>Grafik Referensi Cepat</h2></summary>
  <div class="ref-grid">
- <div class="img-placeholder"><img src="assets/img/grafik-01-siklus-im-harian.svg" alt="Siklus IM Harian" style="max-width:100%;height:auto;border-radius:4px"></div>
- <div class="img-placeholder"><img src="assets/img/grafik-02-alur-data-keputusan.svg" alt="Alur Data ke Keputusan" style="max-width:100%;height:auto;border-radius:4px"></div>
- <div class="img-placeholder"><img src="assets/img/grafik-04-piramida-populasi.svg" alt="Piramida Populasi" style="max-width:100%;height:auto;border-radius:4px"></div>
- <div class="img-placeholder"><img src="assets/img/grafik-07-alur-4w.svg" alt="Alur 4W" style="max-width:100%;height:auto;border-radius:4px"></div>
+<div class="img-placeholder"><img src="assets/img/grafik-01-siklus-im-harian.svg" alt="Siklus IM Harian"></div>
+<div class="img-placeholder"><img src="assets/img/grafik-02-alur-data-keputusan.svg" alt="Alur Data ke Keputusan"></div>
+<div class="img-placeholder"><img src="assets/img/grafik-04-piramida-populasi.svg" alt="Piramida Populasi"></div>
+<div class="img-placeholder"><img src="assets/img/grafik-07-alur-4w.svg" alt="Alur 4W"></div>
  </div>
  </details>
  </section>
@@ -153,11 +162,13 @@
  </section>
  </main>
 
+ <!-- Footer -->
  <footer class="site-footer">
  IM Cell PMI
  <div class="footer-attr">Dibangun oleh <strong>@indrautomoputra</strong> � bukan dokumen resmi PMI/IFRC, untuk tujuan pembelajaran.</div>
  </footer>
 
+ <!-- JS: render markdown, navigasi, pencarian, tema -->
  <script src="assets/js/main.js"></script>
 </body>
 </html>

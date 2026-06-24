@@ -1,3 +1,4 @@
+/* ===== Design Tokens ===== */
 :root {
   --color-red: #D52B1E;
   --color-navy: #011E41;
@@ -16,12 +17,16 @@
   --color-green: #059669;
   --color-orange: #D97706;
   --color-blue: #2563EB;
+  /* Warna brand & netral */
+  /* Warna callout */
   --color-callout-tip-bg: #ECFDF5;
   --color-callout-warning-bg: #FFFBEB;
   --color-callout-critical-bg: #FEF2F2;
+  /* Tipografi */
   --font-heading: 'Montserrat', 'Arial Black', sans-serif;
   --font-body: 'Open Sans', Arial, sans-serif;
   --font-mono: 'SFMono-Regular', 'Consolas', 'Liberation Mono', Menlo, monospace;
+  /* Spasi, radius, shadow */
   --text-sm: 0.8rem;
   --text-base: 0.85rem;
   --text-md: 0.9rem;
@@ -38,17 +43,20 @@
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
   --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
   --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  /* Transisi */
   --transition-fast: 150ms ease;
   --transition-normal: 250ms ease;
   --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Smooth transition untuk theme switch */
 html { transition: background var(--transition-slow), color var(--transition-slow); }
 html *, html *::before, html *::after { transition: background-color var(--transition-slow), border-color var(--transition-slow), box-shadow var(--transition-slow); }
 @media (prefers-reduced-motion: reduce) {
   html *, html *::before, html *::after { transition: none !important; }
 }
 
+/* Dark mode - override token values */
 [data-theme="dark"] {
   --color-red: #EF4444;
   --color-navy: #E2E8F0;

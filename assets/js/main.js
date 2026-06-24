@@ -1,8 +1,12 @@
-﻿const scriptSrc = document.querySelector('script[src$="main.js"]')?.src || '';
+﻿// === Konfigurasi base path ===
+// Menentukan BASE_PATH berdasarkan lokasi file HTML (untuk relative path ke assets)
+const scriptSrc = document.querySelector('script[src$="main.js"]')?.src || '';
 const baseUrl = scriptSrc.replace(/\/assets\/js\/main\.js.*$/, '');
 const relativePath = location.href.replace(/[?#].*/, '').substring(baseUrl.length).replace(/^\//, '');
 const BASE_PATH = relativePath.includes('/') ? '../' : './';
 
+// === Inisialisasi marked.js ===
+// Konfigurasi Markdown renderer: GFM, tanpa line break
 const markedLib = window.marked;
 if (markedLib) {
   markedLib.use({
@@ -11,6 +15,8 @@ if (markedLib) {
   });
 }
 
+// === Sidebar Navigasi ===
+// Membangun menu sidebar dari daftar halaman
 function initSidebar() {
   const nav = document.getElementById('sidebar-nav');
   if (!nav) return;
@@ -30,9 +36,13 @@ function initSidebar() {
     <li class="${isActive('06-produk-im.html')}"><a href="${BASE_PATH}topics/06-produk-im.html">6. Produk IM</a></li>
     <li class="${isActive('07-paket-data-renops.html')}"><a href="${BASE_PATH}topics/07-paket-data-renops.html">7. Paket Data &amp; RenOps</a></li>
     <li class="${isActive('08-relawan-lokal.html')}"><a href="${BASE_PATH}topics/08-relawan-lokal.html">8. Peran Relawan Lokal</a></li>
+    <li class="sep"><span>Panduan</span></li>
+    <li class="${isActive('ojt-di-posko.html')}"><a href="${BASE_PATH}topics/ojt-di-posko.html">OJT di Posko</a></li>
   `;
 }
 
+// === Resolver path Markdown ===
+// Mencari file .md berdasarkan slug halaman
 const SLUG_PATHS = {};
 
 function resolveMdPath(slug) {
@@ -43,6 +53,8 @@ function resolveMdPath(slug) {
   return BASE_PATH + 'topics/' + slug + '.md';
 }
 
+// === Render Halaman ===
+// Fungsi utama: fetch markdown -> render marked.js -> TOC, breadcrumb, topic nav
 async function renderPage() {
   const body = document.getElementById('content-body');
   if (!body) return;
@@ -54,7 +66,7 @@ async function renderPage() {
     slug = 'index';
   } else {
     const match = currentPath.match(/\/([^/]+)\.html/);
-    if (match) slug = match[1];
+    if (match) slug = match[1]; // slug diambil dari nama file HTML
   }
 
   if (!slug) {
@@ -62,6 +74,7 @@ async function renderPage() {
     return;
   }
 
+  // fallback ke konten inline di <script type="text/markdown">
   const fallbackEl = document.querySelector('script[type="text/markdown"][data-slug="' + slug + '"]');
   let md = '';
 
@@ -97,6 +110,8 @@ async function renderPage() {
   renderTopicNav(slug);
 }
 
+// === Daftar Isi (TOC) ===
+// Membuat collapsible daftar isi dari heading h2/h3
 function renderToc() {
   const body = document.getElementById('content-body');
   if (!body) return;
@@ -121,6 +136,8 @@ function renderToc() {
   body.insertBefore(wrapper, body.firstChild);
 }
 
+// === Breadcrumb ===
+// Menampilkan navigasi hirarki: Beranda > Nama Halaman
 function renderBreadcrumb(slug) {
   const el = document.getElementById('breadcrumb');
   if (!el) return;
@@ -133,6 +150,7 @@ function renderBreadcrumb(slug) {
     '05-pin-prioritas': 'PIN & Prioritas',
     '06-produk-im': 'Produk IM',
     '07-paket-data-renops': 'Paket Data & RenOps',
+    'ojt-di-posko': 'OJT di Posko',
   };
   const crumbs = [{ href: BASE_PATH + 'index.html', label: 'Beranda' }];
   if (slug !== 'index' && labels[slug]) {
@@ -147,6 +165,8 @@ function renderBreadcrumb(slug) {
     .join('');
 }
 
+// === Highlight Nav Aktif ===
+// Menandai halaman aktif di sidebar
 function highlightCurrentNav() {
   const current = location.pathname.split('/').pop();
   document.querySelectorAll('#sidebar-nav a').forEach((a) => {
@@ -154,6 +174,8 @@ function highlightCurrentNav() {
   });
 }
 
+// === Navigasi Previous/Next ===
+// Tombol navigasi antar topik
 function renderTopicNav(slug) {
   const nav = document.getElementById('topic-nav');
   if (!nav) return;
@@ -178,6 +200,8 @@ function renderTopicNav(slug) {
   nav.style.display = 'flex';
 }
 
+// === Pencarian Global (client-side) ===
+// Search seluruh halaman dengan debounce input, dropdown hasil
 function initSearch() {
   const input = document.getElementById('global-search');
   const results = document.getElementById('search-results');
@@ -198,7 +222,7 @@ function initSearch() {
     { label: 'Power BI', href: BASE_PATH + 'topics/tools-powerbi.html' },
     { label: 'QGIS', href: BASE_PATH + 'topics/tools-qgis.html' },
 
-    { label: 'OJT di Posko', href: BASE_PATH + 'ojt/ojt-di-posko.html' },
+    { label: 'OJT di Posko', href: BASE_PATH + 'topics/ojt-di-posko.html' },
   ];
 
   let debounceTimer;
@@ -222,7 +246,7 @@ function initSearch() {
         ).join('');
       }
       results.classList.add('visible');
-    }, 150);
+    }, 150); // debounce 150ms agar tidak terlalu sering query
   });
 
   input.addEventListener('keydown', (e) => {
@@ -246,11 +270,14 @@ function initSearch() {
   });
 }
 
+// === Toggle Tema (dark/light) ===
+// Simpan preferensi ke localStorage
 function initTheme() {
   const btn = document.getElementById('theme-toggle');
   if (!btn) return;
 
   const stored = localStorage.getItem('theme');
+  // simpan preferensi tema
   if (stored === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
 
   btn.addEventListener('click', () => {
@@ -265,6 +292,8 @@ function initTheme() {
   });
 }
 
+// === Mobile Nav Toggle ===
+// Slide sidebar + backdrop overlay di layar kecil
 function initNavToggle() {
   const btn = document.getElementById('nav-toggle');
   const sidebar = document.getElementById('sidebar');
@@ -281,6 +310,8 @@ function initNavToggle() {
   });
 }
 
+// === Inisialisasi ===
+// DOMContentLoaded: tema, sidebar, search, render
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initSidebar();

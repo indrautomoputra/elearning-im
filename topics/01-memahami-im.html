@@ -5,6 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <title>Memahami IM | IM Cell PMI</title>
  <meta name="description" content="Pengenalan dasar Information Management untuk relawan IM Cell PMI." />
+<!-- Meta & font: karakter, viewport, SEO -->
  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
  <link rel="preconnect" href="https://fonts.googleapis.com" />
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,8 +14,10 @@
  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
+<!-- Skip-link: aksesibilitas keyboard -->
  <a href="#main" class="skip-link">Lompat ke konten utama</a>
 
+<!-- Header: logo, pencarian global, toggle tema -->
  <header class="site-header">
  <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigasi"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
  <div class="logo">
@@ -32,26 +35,32 @@
  </div>
  </header>
 
+<!-- Sidebar: navigasi daftar topik -->
  <aside id="sidebar" class="sidebar">
  <nav aria-label="Navigasi materi">
  <ul id="sidebar-nav" class="sidebar-nav"></ul>
  </nav>
  </aside>
 
+<!-- Konten utama: breadcrumb + markdown -->
  <main id="main" class="main-content">
  <div id="breadcrumb" class="breadcrumb"></div>
  <div id="content-body" class="content-body">
  <p>Konten sedang dimuat... Jika tidak muncul dalam beberapa detik, <a href="../index.html">kembali ke Beranda</a>.</p>
   </div>
+  <!-- Navigasi topik prev/next -->
   <div id="topic-nav"></div>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
   IM Cell PMI
   <div class="footer-attr">Dibangun oleh <strong>@indrautomoputra</strong> - bukan dokumen resmi PMI/IFRC, untuk tujuan pembelajaran.</div>
   </footer>
 
+  <!-- Marked.js: render markdown dari CDN -->
   <script src="https://cdn.jsdelivr.net/npm/marked@15/marked.min.js"></script>
+  <!-- main.js: inisialisasi SPA -->
   <script src="../assets/js/main.js"></script>
 
 
@@ -72,6 +81,7 @@
 
 
 
+<!-- Fallback markdown inline: digunakan jika fetch gagal -->
 <script type="text/markdown" data-slug="01-memahami-im">
 # Memahami Information Management
 
@@ -199,8 +209,8 @@ Eskalasi ke pendamping atau IM senior jika:
 
 ## Grafik atau Visual Terkait
 
-<div class="img-placeholder"><img src="../assets/img/grafik-01-siklus-im-harian.svg" alt="Siklus IM Harian" style="max-width:100%;height:auto;border-radius:4px"></div>
-<div class="img-placeholder"><img src="../assets/img/grafik-02-alur-data-keputusan.svg" alt="Alur Data ke Keputusan" style="max-width:100%;height:auto;border-radius:4px"></div>
+<div class="img-placeholder"><img src="../assets/img/grafik-01-siklus-im-harian.svg" alt="Siklus IM Harian"></div>
+<div class="img-placeholder"><img src="../assets/img/grafik-02-alur-data-keputusan.svg" alt="Alur Data ke Keputusan"></div>
 
 ---
 

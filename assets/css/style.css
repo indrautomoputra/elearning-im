@@ -51,6 +51,7 @@
   gap: 12px;
   margin: 16px 0;
 }
+.ref-grid img { max-width: 100%; height: auto; border-radius: 4px; }
 
 /* =============================================================
    Kartu Topik � digunakan di index.md dan halaman daftar topik
@@ -279,6 +280,7 @@ details.collapsible-section .ref-grid {
   text-align: center;
   min-height: 160px;
 }
+.img-placeholder img { max-width: 100%; height: auto; border-radius: 4px; }
 
 /* =============================================================
    Tabel ringkasan untuk topik content
@@ -404,6 +406,7 @@ details.collapsible-section .ref-grid {
 [data-theme="dark"] .callout-warning { background: var(--color-callout-warning-bg); }
 [data-theme="dark"] .callout-critical { background: var(--color-callout-critical-bg); }
 
+/* PIN Calculator - menghitung People in Need secara interaktif */
 .pin-calc { background: var(--color-gray-50); border: 1px solid var(--color-gray-200); border-radius: var(--radius-lg); padding: 24px; margin: 24px 0; }
 .pin-calc h3 { font-family: var(--font-heading); font-size: 1.15rem; color: var(--color-navy); margin: 0 0 16px; }
 .pin-section { margin: 16px 0; padding: 16px; background: var(--color-white); border-radius: var(--radius-md); border: 1px solid var(--color-gray-100); }
@@ -420,6 +423,7 @@ details.collapsible-section .ref-grid {
 .pin-table th { background: var(--color-navy); color: var(--color-on-accent); padding: 8px 10px; text-align: left; font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
 .pin-table td { padding: 8px 10px; border-bottom: 1px solid var(--color-gray-200); }
 .pin-table tr:nth-child(even) td { background: var(--color-gray-50); }
+/* Prioritas: tinggi/sedang/rendah */
 .pin-table .prioritas-tinggi { color: var(--color-red); font-weight: 600; }
 .pin-table .prioritas-sedang { color: var(--color-orange); font-weight: 600; }
 .pin-table .prioritas-rendah { color: var(--color-green); font-weight: 600; }
@@ -427,6 +431,7 @@ details.collapsible-section .ref-grid {
 .pin-table input:focus { border-color: var(--color-red); outline: none; }
 .pin-table select { padding: 4px; border: 1px solid var(--color-gray-300); border-radius: var(--radius-sm); font-size: var(--text-sm); background: var(--color-white); color: var(--color-gray-800); }
 .pin-table td:first-child { white-space: nowrap; }
+/* Rekomendasi & severity */
 .pin-rekomendasi { margin-top: 12px; padding: 12px 16px; background: var(--color-navy); color: var(--color-on-accent); border-radius: var(--radius-md); font-size: var(--text-md); }
 .pin-sev-urg { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 8px; padding: 8px 12px; background: var(--color-gray-50); border-radius: var(--radius-sm); border: 1px solid var(--color-gray-200); }
 .pin-sev-label { font-size: var(--text-sm); color: var(--color-gray-600); display: inline-flex; align-items: center; gap: 4px; }
