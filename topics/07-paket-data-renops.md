@@ -45,19 +45,19 @@ Paket data RenOps terdiri dari 5 komponen:
 
 ```
 Paket Data RenOps/
-â”œâ”€â”€ 01_Profil_Wilayah/
-â”‚   â”œâ”€â”€ Peta_Administrasi.pdf
-â”‚   â”œâ”€â”€ Data_Demografi.xlsx
-â”œâ”€â”€ 02_Data_Dampak/
-â”‚   â”œâ”€â”€ Data_Pengungsi.xlsx
-â”‚   â”œâ”€â”€ Kerusakan.xlsx
-â”œâ”€â”€ 03_Kapasitas/
-â”‚   â”œâ”€â”€ 4W_Matrix.xlsx
-â”‚   â”œâ”€â”€ Inventory.xlsx
-â”œâ”€â”€ 04_Analisis/
-â”‚   â”œâ”€â”€ PIN_Calculation.xlsx
-â”‚   â”œâ”€â”€ Gap_Analysis.xlsx
-â””â”€â”€ README.txt
++-- 01_Profil_Wilayah/
+|   +-- Peta_Administrasi.pdf
+|   +-- Data_Demografi.xlsx
++-- 02_Data_Dampak/
+|   +-- Data_Pengungsi.xlsx
+|   +-- Kerusakan.xlsx
++-- 03_Kapasitas/
+|   +-- 4W_Matrix.xlsx
+|   +-- Inventory.xlsx
++-- 04_Analisis/
+|   +-- PIN_Calculation.xlsx
+|   +-- Gap_Analysis.xlsx
++-- README.txt
 ```
 
 ### Cek Kualitas

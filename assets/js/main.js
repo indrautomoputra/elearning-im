@@ -1,4 +1,7 @@
-﻿const BASE_PATH = (location.pathname.includes('/topics/') || location.pathname.includes('/checklists/') || location.pathname.includes('/templates/')) ? '../' : './';
+﻿const scriptSrc = document.querySelector('script[src$="main.js"]')?.src || '';
+const baseUrl = scriptSrc.replace(/\/assets\/js\/main\.js.*$/, '');
+const relativePath = location.href.replace(/[?#].*/, '').substring(baseUrl.length).replace(/^\//, '');
+const BASE_PATH = relativePath.includes('/') ? '../' : './';
 
 const markedLib = window.marked;
 if (markedLib) {
@@ -30,10 +33,7 @@ function initSidebar() {
   `;
 }
 
-const SLUG_PATHS = {
-  'checklists-index': 'checklists/checklists-index.md',
-  'templates-index': 'templates/templates-index.md',
-};
+const SLUG_PATHS = {};
 
 function resolveMdPath(slug) {
   if (SLUG_PATHS[slug]) return BASE_PATH + SLUG_PATHS[slug];
@@ -197,8 +197,7 @@ function initSearch() {
     { label: 'Excel', href: BASE_PATH + 'topics/tools-excel.html' },
     { label: 'Power BI', href: BASE_PATH + 'topics/tools-powerbi.html' },
     { label: 'QGIS', href: BASE_PATH + 'topics/tools-qgis.html' },
-    { label: 'Checklist', href: BASE_PATH + 'checklists/checklists-index.html' },
-    { label: 'Template', href: BASE_PATH + 'templates/templates-index.html' },
+
     { label: 'OJT di Posko', href: BASE_PATH + 'ojt/ojt-di-posko.html' },
   ];
 
