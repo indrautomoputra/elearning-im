@@ -903,6 +903,8 @@ html { scroll-padding-top: calc(var(--header-height) + 12px); }
   .content-body h3 { font-size: 1rem; }
   .content-body table { font-size: var(--text-sm); }
   .content-body td, .content-body th { padding: 6px 8px; }
+  .content-body p { max-width: none; }
+  .hero-cta { padding: 10px 20px; font-size: 0.9rem; }
 
   .stats-section { padding: 32px 20px; }
   .chart-section { padding: 0 20px 32px; }
@@ -918,6 +920,15 @@ html { scroll-padding-top: calc(var(--header-height) + 12px); }
   .block-grid { grid-template-columns: 1fr; }
 
   .site-footer { padding: 20px; margin-left: 0; }
+  .site-footer .footer-main { flex-direction: column; gap: 12px; text-align: center; }
+  .site-footer .footer-logos { justify-content: center; }
+  .site-footer .footer-logo { height: 24px; }
+
+  #topic-nav { flex-direction: column; gap: 8px; }
+  #topic-nav a { max-width: 100%; text-align: center; }
+  #topic-nav .nav-prev { margin-right: 0; }
+  #topic-nav .nav-next { margin-left: 0; }
+
   .site-header { padding: 0 16px; }
 
   .site-header .logo-text { font-size: var(--text-md); }

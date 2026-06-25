@@ -31,8 +31,13 @@
  border-radius: var(--radius-sm); font-weight: 600;
  transition: background var(--transition-fast);
  }
- .page-404 a:hover { background: var(--color-navy); }
- </style>
+  .page-404 a:hover { background: var(--color-navy); }
+  @media (max-width: 768px) {
+  .page-404 { margin: 80px auto; }
+  .page-404 h1 { font-size: 3rem; }
+  .page-404 p { font-size: 1rem; }
+  }
+  </style>
 </head>
 <body>
  <!-- Konten: pesan error + tombol kembali -->
