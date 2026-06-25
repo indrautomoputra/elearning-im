@@ -213,9 +213,6 @@
 }
 .hero .disclaimer strong { color: inherit; opacity: 0.9; }
 
-@media (max-width: 900px) {
-}
-
 /* =============================================================
    Collapsible section (details/summary)
    ============================================================= */
@@ -388,6 +385,13 @@ details.collapsible-section .ref-grid {
 /* =============================================================
    Responsive
    ============================================================= */
+@media (max-width: 480px) {
+  .topic-card { gap: 8px; padding: 12px; }
+  .topic-icon { width: 32px; height: 32px; }
+  .pin-table input { width: 60px; }
+  .pin-table select { max-width: 50px; }
+}
+
 @media (max-width: 768px) {
   .topic-grid {
     grid-template-columns: 1fr;
@@ -410,6 +414,13 @@ details.collapsible-section .ref-grid {
 
   .pin-calc-grid { grid-template-columns: 1fr; }
   .pin-calc { padding: 16px; }
+  .pin-section { padding: 12px; }
+  .pin-table { font-size: var(--text-sm); }
+  .pin-table th, .pin-table td { padding: 6px 6px; }
+  .pin-table input { width: 60px; padding: 4px; }
+  .pin-sev-urg { gap: 6px 8px; padding: 6px 8px; }
+  .pin-sev-label { font-size: 0.7rem; }
+  .pin-rekomendasi { font-size: var(--text-base); padding: 10px 12px; }
 }
 
 [data-theme="dark"] .callout-tip { background: var(--color-callout-tip-bg); }
@@ -438,6 +449,7 @@ details.collapsible-section .ref-grid {
 .pin-table .prioritas-sedang { color: var(--color-orange); font-weight: 600; }
 .pin-table .prioritas-rendah { color: var(--color-green); font-weight: 600; }
 .pin-table input { width: 80px; padding: 4px 6px; border: 1px solid var(--color-gray-300); border-radius: var(--radius-sm); font-size: var(--text-sm); background: var(--color-white); color: var(--color-gray-800); }
+.pin-direct-label { font-size: var(--text-sm); display: flex; align-items: center; gap: 8px; }
 .pin-table input:focus { border-color: var(--color-red); outline: none; }
 .pin-table select { padding: 4px; border: 1px solid var(--color-gray-300); border-radius: var(--radius-sm); font-size: var(--text-sm); background: var(--color-white); color: var(--color-gray-800); }
 .pin-table td:first-child { white-space: nowrap; }
