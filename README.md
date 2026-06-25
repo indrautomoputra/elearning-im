@@ -1,8 +1,13 @@
+<img width="1220" height="729" alt="Screenshot_2026-06-25-02-52-48-676_com android chrome~2" src="https://github.com/user-attachments/assets/db2a625a-55c0-4b05-9d9f-f729fbe9731e" />
+
+
+<img width="1220" height="975" alt="Screenshot_2026-06-25-02-52-48-676_com android chrome~3" src="https://github.com/user-attachments/assets/ddb0c052-a620-4161-8dea-367decd76f3e" />
+
 # IM Cell PMI - Panduan Belajar & Operasional
 
 Panduan belajar dan referensi operasional untuk Information Management Cell PMI, mencakup materi IM, tools, dan OJT.
 
-Dibangun oleh [@indrautomoputra](https://github.com/indrautomoputra). Bukan dokumen resmi PMI atau IFRC - murni untuk keperluan pembelajaran.
+Dapat diakses disini https://indrautomoputra.github.io/elearning-im/
 
 ## Tentang Project
 
